@@ -79,7 +79,6 @@ public class ReceiptAdapter extends FirebaseRecyclerAdapter<Receipt,ReceiptAdapt
                 Intent intent = new Intent(context,DetailReceiptActivity.class);
                 intent.putExtra("MADON",model.getMadon());
                 intent.putExtra("MAGIOHANG",model.getMagh());
-                intent.putExtra("TRANGTHAI",model.getTrangthai());
                 intent.putExtra("TONGTIEN",model.getTongtien());
                 intent.putExtra("NGAYDAT",model.getNgaydat());
                 context.startActivity(intent);

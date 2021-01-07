@@ -53,4 +53,5 @@ public class Receipt {
     public void setTongtien(String tongtien) {
         this.tongtien = tongtien;
     }
+
 }

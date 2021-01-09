@@ -1,9 +1,7 @@
-package com.example.coffeebakery;
+package com.example.coffeebakery.Cart;
 
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,15 +15,15 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.coffeebakery.R;
+import com.example.coffeebakery.Receipt.Receipt;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.firebase.ui.database.SnapshotParser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.sql.Time;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
@@ -112,33 +110,33 @@ public class CartFragment extends Fragment {
                         .setNegativeButton("Xác nhận", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-//                                mData.child("Taikhoan").child(gmail).child("Giohang").child("Cart"+STT).addListenerForSingleValueEvent(new ValueEventListener() {
-//                                    @Override
-//                                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                                        for(DataSnapshot data : snapshot.getChildren()){
-//                                            String gh = data.child("giohang").getValue().toString();
-//                                            if(gh.contains("Cart"+STT)){
-//                                                SimpleDateFormat dateformat = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss aa");
-//                                                Calendar calendar = Calendar.getInstance();
-//                                                String ngay = dateformat.format(calendar.getTime());
-//                                                String mahd = String.valueOf(calendar.getTimeInMillis());
-//                                                String trangthai = "Đang xử lý";
-//                                                Receipt re = new Receipt(mahd,ngay,gh,trangthai,tamtinh.getText().toString().trim());
-//                                                mData.child("Taikhoan").child(gmail).child("HoaDon").child("Receipt" + STT).setValue(re);
-//                                                recyclerView.removeAllViews();
-//                                                Toast.makeText(v.getContext(), "Đã tiến hành đặt hàng!", Toast.LENGTH_SHORT).show();
-//                                                STT += 1;
-//                                                slmon = 1;
-//
-//                                            }
-//                                        }
-//                                    }
-//
-//                                    @Override
-//                                    public void onCancelled(@NonNull DatabaseError error) {
-//
-//                                    }
-//                                });
+                                mData.child("Taikhoan").child(gmail).child("Giohang").child("Cart"+STT).addListenerForSingleValueEvent(new ValueEventListener() {
+                                    @Override
+                                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                        for(DataSnapshot data : snapshot.getChildren()){
+                                            String gh = data.child("giohang").getValue().toString();
+                                            if(gh.contains("Cart"+STT)){
+                                                SimpleDateFormat dateformat = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss aa");
+                                                Calendar calendar = Calendar.getInstance();
+                                                String ngay = dateformat.format(calendar.getTime());
+                                                String mahd = String.valueOf(calendar.getTimeInMillis());
+                                                String trangthai = "Đang xử lý";
+                                                Receipt re = new Receipt(mahd,ngay,gh,trangthai,tamtinh.getText().toString().trim());
+                                                mData.child("Taikhoan").child(gmail).child("HoaDon").child("Receipt" + STT).setValue(re);
+                                                recyclerView.removeAllViews();
+                                                Toast.makeText(v.getContext(), "Đã tiến hành đặt hàng!", Toast.LENGTH_SHORT).show();
+                                                STT += 1;
+                                                slmon = 1;
+
+                                            }
+                                        }
+                                    }
+
+                                    @Override
+                                    public void onCancelled(@NonNull DatabaseError error) {
+
+                                    }
+                                });
 
                             }
                         })

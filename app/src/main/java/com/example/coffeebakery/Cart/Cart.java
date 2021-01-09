@@ -1,4 +1,4 @@
-package com.example.coffeebakery;
+package com.example.coffeebakery.Cart;
 
 public class Cart {
 

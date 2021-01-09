@@ -1,9 +1,8 @@
-package com.example.coffeebakery;
+package com.example.coffeebakery.Receipt;
 
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +14,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.coffeebakery.DetailReceipt.DetailReceiptActivity;
+import com.example.coffeebakery.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DataSnapshot;
@@ -76,7 +77,7 @@ public class ReceiptAdapter extends FirebaseRecyclerAdapter<Receipt,ReceiptAdapt
             @Override
             public void onClick(View v) {
                 Context context = v.getContext();
-                Intent intent = new Intent(context,DetailReceiptActivity.class);
+                Intent intent = new Intent(context, DetailReceiptActivity.class);
                 intent.putExtra("MADON",model.getMadon());
                 intent.putExtra("MAGIOHANG",model.getMagh());
                 intent.putExtra("TONGTIEN",model.getTongtien());

@@ -16,12 +16,11 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
+import com.example.coffeebakery.Cart.Cart;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import java.util.Calendar;
-
-import static com.example.coffeebakery.CartFragment.tongSL;
+import static com.example.coffeebakery.Cart.CartFragment.tongSL;
 import static com.example.coffeebakery.LoginActivity.gmail;
 
 public class DetailProductActivity extends AppCompatActivity {

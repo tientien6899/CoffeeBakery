@@ -1,4 +1,4 @@
-package com.example.coffeebakery;
+package com.example.coffeebakery.Product;
 
 import android.os.Bundle;
 
@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.coffeebakery.R;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.firebase.ui.database.SnapshotParser;
 import com.google.firebase.database.DataSnapshot;
@@ -51,7 +52,8 @@ public class ProductFragment extends Fragment {
                                         snapshot.child("giaM").getValue().toString(),
                                         snapshot.child("giaL").getValue().toString(),
                                         snapshot.child("giaKM").getValue().toString(),
-                                        snapshot.child("mota").getValue().toString());
+                                        snapshot.child("mota").getValue().toString(),
+                                        snapshot.child("ngaydang").getValue().toString());
                             }
                         })
                         .build();

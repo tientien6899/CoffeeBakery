@@ -1,4 +1,4 @@
-package com.example.coffeebakery;
+package com.example.coffeebakery.Receipt;
 
 import android.os.Bundle;
 
@@ -11,12 +11,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.coffeebakery.R;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.firebase.ui.database.SnapshotParser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 
-import static com.example.coffeebakery.DetailProductActivity.STT;
 import static com.example.coffeebakery.HomeActivity.mData;
 import static com.example.coffeebakery.LoginActivity.gmail;
 

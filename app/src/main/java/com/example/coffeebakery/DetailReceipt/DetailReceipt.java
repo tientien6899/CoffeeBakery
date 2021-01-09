@@ -1,4 +1,4 @@
-package com.example.coffeebakery;
+package com.example.coffeebakery.DetailReceipt;
 
 public class DetailReceipt {
     String link, sl, ten, gia;

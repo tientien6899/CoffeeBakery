@@ -17,7 +17,7 @@
         <activity android:name=".DeliveryActivity">
 
         </activity>
-        <activity android:name=".DetailReceiptActivity" />
+        <activity android:name=".DetailReceipt.DetailReceiptActivity" />
         <activity android:name=".DetailProductActivity" />
         <activity android:name=".HomeActivity">
             <intent-filter>

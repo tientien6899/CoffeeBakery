@@ -2,14 +2,16 @@ package com.example.coffeebakery;
 
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.coffeebakery.Cart.CartFragment;
+import com.example.coffeebakery.Home.HomeFragment;
+import com.example.coffeebakery.Product.ProductFragment;
+import com.example.coffeebakery.Receipt.ReceiptFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;

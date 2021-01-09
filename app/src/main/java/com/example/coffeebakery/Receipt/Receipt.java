@@ -1,4 +1,4 @@
-package com.example.coffeebakery;
+package com.example.coffeebakery.Receipt;
 
 public class Receipt {
     String madon, ngaydat, magh, trangthai, tongtien;

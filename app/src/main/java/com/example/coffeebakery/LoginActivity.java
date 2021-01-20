@@ -27,7 +27,7 @@ public class LoginActivity extends AppCompatActivity {
     TextView txtdangky, txtquenmatkhau;
 
     public static FirebaseAuth mAuth;
-    public static String gmail = "a";
+    public static String gmail = "mauquy123";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,9 +103,11 @@ public class LoginActivity extends AppCompatActivity {
         btndangnhap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String usernamelogin = edtusernamedn.getText().toString().trim();
-                String passwordlogin = edtpassworddn.getText().toString().trim();
-                Dangnhap(usernamelogin, passwordlogin);
+//                String usernamelogin = edtusernamedn.getText().toString().trim();
+//                String passwordlogin = edtpassworddn.getText().toString().trim();
+//                Dangnhap(usernamelogin, passwordlogin);
+                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -119,7 +121,7 @@ public class LoginActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             Toast.makeText(LoginActivity.this, "Đăng nhập thành công.", Toast.LENGTH_LONG).show();
                             gmail = email;
-                            Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
+                            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                             startActivity(intent);
                         } else {
                             Toast.makeText(LoginActivity.this, "Đăng nhập thất bại.", Toast.LENGTH_LONG).show();

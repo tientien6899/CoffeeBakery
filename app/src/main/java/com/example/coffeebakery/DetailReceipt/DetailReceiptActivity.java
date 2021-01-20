@@ -46,7 +46,6 @@ public class DetailReceiptActivity extends AppCompatActivity {
                         String phuong = snap.child("phuong").getValue().toString();
                         String quan = snap.child("quan").getValue().toString();
                         String tp = snap.child("thanhpho").getValue().toString();
-
                         ten_kh.setText(hoten);
                         sdt_kh.setText(sdt);
                         diachi.setText(sonha + ", " + phuong + ", " + quan + ", " + tp);
@@ -70,7 +69,7 @@ public class DetailReceiptActivity extends AppCompatActivity {
         ngaydat.setText(nd);
         thanhtien.setText(tt);
 
-        data.child("Taikhoan").child(gmail).child("Giohang").child(mgh).addListenerForSingleValueEvent(new ValueEventListener() {
+        data.child("GioHang").child(gmail).child(md).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot snap : snapshot.getChildren()){

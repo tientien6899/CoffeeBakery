@@ -34,7 +34,7 @@ public class DetailProductActivity extends AppCompatActivity {
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myData = database.getReference();
     public static int slmon = 1;
-    public static int STT = 1;
+    public static int STT = 0;
     static int temp = 0;
     String kichthuoc = "";
 
@@ -153,6 +153,7 @@ public class DetailProductActivity extends AppCompatActivity {
         btn_datmon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                STT = 1;
                 Cart cart = new Cart(String.valueOf(slmon),
                         "Cart" + STT,
                         masp,
@@ -162,7 +163,8 @@ public class DetailProductActivity extends AppCompatActivity {
                         link,
                         tongtien.getText().toString().trim(),
                         kichthuoc,
-                        edt_ghichu.getText().toString().trim());
+                        edt_ghichu.getText().toString().trim(),
+                        gmail);
                 myData.child("Taikhoan").child(gmail).child("Giohang").child("Cart" + STT).child(cart.getSttgiohang()).setValue(cart);
                 tongSL += Integer.parseInt(cart.getSoluong());
                 slmon++;

@@ -12,12 +12,13 @@ public class Cart {
     String kichthuoc;
     String ghichu;
     String soluong;
+    String nguoidung;
 
     public Cart(){
 
     }
 
-    public Cart(String sttgh, String gh, String ma, String ten, String gia, String soluong, String hinhanh, String tongtien, String kichthuoc, String ghichu) {
+    public Cart(String sttgh, String gh, String ma, String ten, String gia, String soluong, String hinhanh, String tongtien, String kichthuoc, String ghichu, String nguoidung) {
         this.sttgiohang = sttgh;
         this.giohang = gh;
         this.ma = ma;
@@ -28,6 +29,7 @@ public class Cart {
         this.tongtien = tongtien;
         this.kichthuoc = kichthuoc;
         this.ghichu = ghichu;
+        this.nguoidung = nguoidung;
 
     }
     public String getSttgiohang() {
@@ -100,11 +102,20 @@ public class Cart {
     public void setGhichu(String ghichu) {
         this.ghichu = ghichu;
     }
+
     public String getSoluong() {
         return soluong;
     }
 
     public void setSoluong(String soluong) {
         this.soluong = soluong;
+    }
+
+    public String getNguoidung() {
+        return nguoidung;
+    }
+
+    public void setNguoidung(String nguoidung) {
+        this.nguoidung = nguoidung;
     }
 }

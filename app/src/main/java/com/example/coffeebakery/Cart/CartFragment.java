@@ -65,7 +65,8 @@ public class CartFragment extends Fragment {
                                         snapshot.child("hinhanh").getValue().toString(),
                                         snapshot.child("tongtien").getValue().toString(),
                                         snapshot.child("kichthuoc").getValue().toString(),
-                                        snapshot.child("ghichu").getValue().toString());
+                                        snapshot.child("ghichu").getValue().toString(),
+                                        snapshot.child("nguoidung").getValue().toString());
                             }
                         })
                         .build();
@@ -110,26 +111,59 @@ public class CartFragment extends Fragment {
                         .setNegativeButton("Xác nhận", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                mData.child("Taikhoan").child(gmail).child("Giohang").child("Cart"+STT).addListenerForSingleValueEvent(new ValueEventListener() {
+                                mData.child("STT").addListenerForSingleValueEvent(new ValueEventListener() {
                                     @Override
                                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                        for(DataSnapshot data : snapshot.getChildren()){
-                                            String gh = data.child("giohang").getValue().toString();
-                                            if(gh.contains("Cart"+STT)){
-                                                SimpleDateFormat dateformat = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss aa");
-                                                Calendar calendar = Calendar.getInstance();
-                                                String ngay = dateformat.format(calendar.getTime());
-                                                String mahd = String.valueOf(calendar.getTimeInMillis());
-                                                String trangthai = "Đang xử lý";
-                                                Receipt re = new Receipt(mahd,ngay,gh,trangthai,tamtinh.getText().toString().trim());
-                                                mData.child("Taikhoan").child(gmail).child("HoaDon").child("Receipt" + STT).setValue(re);
-                                                recyclerView.removeAllViews();
-                                                Toast.makeText(v.getContext(), "Đã tiến hành đặt hàng!", Toast.LENGTH_SHORT).show();
-                                                STT += 1;
-                                                slmon = 1;
+                                        String string_stt = snapshot.child("stt").getValue().toString();
+                                        SimpleDateFormat dateformat = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss aa");
+                                        Calendar calendar = Calendar.getInstance();
+                                        String ngay = dateformat.format(calendar.getTime());
+                                        String trangthai = "Đang xử lý";
+                                        Receipt re = new Receipt(string_stt,ngay,trangthai,tamtinh.getText().toString().trim(),gmail);
+                                        //tạo đơn hàng
+                                        mData.child("DonHang").child(re.getMadon()).setValue(re);
 
+                                        //tạo giỏ hàng
+                                        mData.child("Taikhoan").child(gmail).child("Giohang").child("Cart"+STT).addListenerForSingleValueEvent(new ValueEventListener() {
+                                        @Override
+                                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                            for(DataSnapshot data : snapshot.getChildren()){
+                                                String gh = data.child("giohang").getValue().toString();
+                                                if(gh.contains("Cart"+STT)){
+                                                    String string_ghichu = data.child("ghichu").getValue().toString();
+                                                    String string_gia = data.child("gia").getValue().toString();
+                                                    String string_giohang = string_stt + "";
+                                                    String string_hinhanh = data.child("hinhanh").getValue().toString();
+                                                    String string_kichthuoc = data.child("kichthuoc").getValue().toString();
+                                                    String string_ma = data.child("ma").getValue().toString();
+                                                    String string_nguoidung = data.child("nguoidung").getValue().toString();
+                                                    String string_soluong = data.child("soluong").getValue().toString();
+                                                    String string_sttgiohang = data.child("sttgiohang").getValue().toString();
+                                                    String string_ten = data.child("ten").getValue().toString();
+                                                    String string_tongtien = data.child("tongtien").getValue().toString();
+
+                                                    Cart c = new Cart(string_sttgiohang,string_giohang,string_ma,
+                                                            string_ten,string_gia,string_soluong,string_hinhanh,
+                                                            string_tongtien,string_kichthuoc,string_ghichu,string_nguoidung);
+                                                    mData.child("GioHang").child(c.getNguoidung()).child(c.getGiohang()).child(c.getSttgiohang()).setValue(c);
+                                                }
                                             }
+                                            STT = 0;
+                                            slmon = 1;
+                                            mData.child("Taikhoan").child(gmail).child("Giohang").child("Cart1").removeValue();
                                         }
+
+                                        @Override
+                                        public void onCancelled(@NonNull DatabaseError error) {
+
+                                        }
+                                        });
+
+                                        int temp = Integer.parseInt(string_stt) + 1;
+                                        mData.child("STT").child("stt").setValue(String.valueOf(temp));
+                                        recyclerView.removeAllViews();
+                                        Toast.makeText(v.getContext(), "Đã tiến hành đặt hàng!", Toast.LENGTH_SHORT).show();
+
                                     }
 
                                     @Override

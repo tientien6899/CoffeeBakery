@@ -2,7 +2,7 @@
     <string name="app_name">CoffeeBakery</string>
 
     <string name="title_trangchu">Trang chủ</string>
-    <string name="title_sanpham">Sản phẩm</string>
+    <string name="title_sanpham">Menu</string>
     <string name="title_giohang">Giỏ hàng</string>
     <string name="title_hoadon">Hóa đơn</string>
     <string name="title_caidat">Cài đặt</string>
@@ -10,7 +10,7 @@
 
     <menu xmlns:android="http://schemas.android.com/apk/res/android" tools:ignore="MissingTranslation">
         <item android:id="@+id/navigation_trangchu" android:title="@string/title_trangchu" />
-        <item android:id="@+id/navigation_sanpham" android:title="@string/title_sanpham" />
+        <item android:id="@+id/navigation_sanpham" android:title="@string/title_menu" />
         <item android:id="@+id/navigation_giohang" android:title="@string/title_giohang" />
         <item android:id="@+id/navigation_hoadon" android:title="@string/title_hoadon" />
         <item android:id="@+id/navigation_caidat" android:title="@string/title_caidat" />

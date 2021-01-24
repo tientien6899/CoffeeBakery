@@ -103,9 +103,9 @@ public class LoginActivity extends AppCompatActivity {
         btndangnhap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                String usernamelogin = edtusernamedn.getText().toString().trim();
-//                String passwordlogin = edtpassworddn.getText().toString().trim();
-//                Dangnhap(usernamelogin, passwordlogin);
+                String usernamelogin = edtusernamedn.getText().toString().trim();
+                String passwordlogin = edtpassworddn.getText().toString().trim();
+                Dangnhap(usernamelogin, passwordlogin);
                 Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                 startActivity(intent);
             }

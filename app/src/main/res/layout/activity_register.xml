@@ -92,97 +92,44 @@
                         android:textSize="20sp"
                         android:textStyle="italic" />
 
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <EditText
+                        android:id="@+id/edt_usernameDK"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
                         android:layout_marginTop="25dp"
-                        android:background="@drawable/blue_border_rounded_cornwe">
+                        android:background="@drawable/bg_textfield"
+                        android:hint="Tên đăng nhập"
+                        android:inputType="textEmailAddress"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="15dp"
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
 
-                        <EditText
-                            android:id="@+id/edt_usernameDK"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_toRightOf="@+id/icon1"
-                            android:background="@android:color/transparent"
-                            android:hint="Tên người dùng"
-                            android:inputType="textEmailAddress"
-                            android:maxLines="1"
-                            android:paddingLeft="17dp"
-                            android:paddingTop="15dp"
-                            android:paddingBottom="15dp"
-                            android:textCursorDrawable="@drawable/cursor_color"
-                            android:textSize="17sp" />
+                    <EditText
+                        android:id="@+id/edt_passwordDK"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/bg_textfield"
+                        android:hint="Mật khẩu"
+                        android:inputType="textPassword"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="15dp"
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
 
-                        <ImageView
-                            android:id="@+id/icon1"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:layout_centerVertical="true"
-                            android:layout_marginLeft="17dp"
-                            android:src="@drawable/ic_outline_email_24" />
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="25dp"
-                        android:background="@drawable/blue_border_rounded_cornwe">
-
-                        <EditText
-                            android:id="@+id/edt_passwordDK"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_toRightOf="@+id/icon2"
-                            android:background="@android:color/transparent"
-                            android:hint="Mật khẩu"
-                            android:inputType="textPassword"
-                            android:maxLength="10"
-                            android:maxLines="1"
-                            android:paddingLeft="17dp"
-                            android:paddingTop="15dp"
-                            android:paddingBottom="15dp"
-                            android:textCursorDrawable="@drawable/cursor_color"
-                            android:textSize="17sp" />
-
-                        <ImageView
-                            android:id="@+id/icon2"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:layout_centerVertical="true"
-                            android:layout_marginLeft="17dp"
-                            android:src="@drawable/ic_outline_vpn_key_24" />
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="25dp"
-                        android:background="@drawable/blue_border_rounded_cornwe">
-
-                        <EditText
-                            android:id="@+id/edt_repeatpass"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_toRightOf="@+id/icon3"
-                            android:background="@android:color/transparent"
-                            android:hint="Nhập lại mật khẩu"
-                            android:inputType="textPassword"
-                            android:maxLength="10"
-                            android:maxLines="1"
-                            android:paddingLeft="17dp"
-                            android:paddingTop="15dp"
-                            android:paddingBottom="15dp"
-                            android:textCursorDrawable="@drawable/cursor_color"
-                            android:textSize="17sp" />
-
-                        <ImageView
-                            android:id="@+id/icon3"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:layout_centerVertical="true"
-                            android:layout_marginLeft="17dp"
-                            android:src="@drawable/ic_outline_repeat_24" />
-                    </RelativeLayout>
+                    <EditText
+                        android:id="@+id/edt_repeatpass"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/bg_textfield"
+                        android:hint="Nhập lại mật khẩu"
+                        android:inputType="textPassword"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="15dp"
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

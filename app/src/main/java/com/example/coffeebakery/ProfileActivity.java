@@ -46,7 +46,7 @@ public class ProfileActivity extends AppCompatActivity {
 
                 mData.child("Taikhoan").child(tdn).child("Thongtincanhan").setValue(p);
 
-                Intent intent = new Intent(ProfileActivity.this, ForgotPasswordActivity.class);
+                Intent intent = new Intent(ProfileActivity.this, HomeActivity.class);
                 startActivity(intent);
             }
         });

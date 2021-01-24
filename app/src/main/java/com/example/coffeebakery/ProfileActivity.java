@@ -35,18 +35,18 @@ public class ProfileActivity extends AppCompatActivity {
         btndongy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String tdn = gmail.substring(0, gmail.indexOf("@"));
                 Profile p = new Profile();
                 p.hoten = edthoten.getText().toString().trim();
                 p.sdt = edtsdt.getText().toString().trim();
-                p.sonhaduong = edtsonhaduong.getText().toString().trim();
-                p.phuongxa = edtphuongxa.getText().toString().trim();
-                p.quanhuyen = edtquanhuyen.getText().toString().trim();
-                p.tinhthanhpho = edttinhthanhpho.getText().toString().trim();
+                p.sonha = edtsonhaduong.getText().toString().trim();
+                p.phuong = edtphuongxa.getText().toString().trim();
+                p.quan = edtquanhuyen.getText().toString().trim();
+                p.thanhpho = edttinhthanhpho.getText().toString().trim();
+                p.gmail = gmail;
 
-                mData.child("Taikhoan").child(tdn).child("Thongtincanhan").setValue(p);
+                mData.child("KHACHHANG").child(p.getGmail()).setValue(p);
 
-                Intent intent = new Intent(ProfileActivity.this, ForgotPasswordActivity.class);
+                Intent intent = new Intent(ProfileActivity.this, HomeActivity.class);
                 startActivity(intent);
             }
         });

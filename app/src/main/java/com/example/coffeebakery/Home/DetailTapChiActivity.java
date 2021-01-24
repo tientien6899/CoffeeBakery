@@ -1,0 +1,43 @@
+package com.example.coffeebakery.Home;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
+import com.example.coffeebakery.R;
+
+public class DetailTapChiActivity extends AppCompatActivity {
+
+    TextView tieude, ngaydang, noidung;
+    ImageView hinhanh;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_detail_tap_chi);
+        AnhXa();
+
+        Intent intent = getIntent();
+        String td = intent.getStringExtra("TIEUDE");
+        String nd = intent.getStringExtra("NGAYDANG");
+        String ndg = intent.getStringExtra("NOIDUNG");
+        String img = intent.getStringExtra("HINHANH");
+
+        tieude.setText(td);
+        ngaydang.setText("Ngày đăng: " + nd);
+        noidung.setText(ndg);
+        Glide.with(this).load(img).into(hinhanh);
+
+    }
+
+    private void AnhXa() {
+        tieude = findViewById(R.id.thongtintapchi_tieude);
+        ngaydang = findViewById(R.id.thongtintapchi_ngaydang);
+        noidung = findViewById(R.id.thongtintapchi_noidung);
+        hinhanh = findViewById(R.id.thongtintapchi_hinhanh);
+    }
+}

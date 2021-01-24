@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.coffeebakery.Product.ProductAdapter;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -27,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
     TextView txtdangky, txtquenmatkhau;
 
     public static FirebaseAuth mAuth;
-    public static String gmail = "mauquy123";
+    public static String gmail = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +37,7 @@ public class LoginActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         Anhxa();
+        edtusernamedn.requestFocus();
 
         //Không được để trống tên đăng nhập
         edtusernamedn.addTextChangedListener(new TextWatcher() {
@@ -103,11 +105,9 @@ public class LoginActivity extends AppCompatActivity {
         btndangnhap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                String usernamelogin = edtusernamedn.getText().toString().trim();
-//                String passwordlogin = edtpassworddn.getText().toString().trim();
-//                Dangnhap(usernamelogin, passwordlogin);
-                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                startActivity(intent);
+                String usernamelogin = edtusernamedn.getText().toString().trim() + "@gmail.com";
+                String passwordlogin = edtpassworddn.getText().toString().trim();
+                Dangnhap(usernamelogin, passwordlogin);
             }
         });
     }
@@ -119,8 +119,9 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(LoginActivity.this, "Đăng nhập thành công.", Toast.LENGTH_LONG).show();
-                            gmail = email;
+                            Toast.makeText(LoginActivity.this, "Đăng nhập thành công!", Toast.LENGTH_LONG).show();
+                            String[] temp = email.split("@");
+                            gmail = temp[0];
                             Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                             startActivity(intent);
                         } else {

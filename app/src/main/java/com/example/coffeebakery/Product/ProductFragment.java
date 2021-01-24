@@ -10,19 +10,27 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SearchView;
 
+import com.example.coffeebakery.Home.TapChiAdapter;
 import com.example.coffeebakery.R;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.firebase.ui.database.SnapshotParser;
 import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
 
 public class ProductFragment extends Fragment {
 
     RecyclerView recyclerView;
-    static ProductAdapter adapter;
-    private DatabaseReference danhsachRef, mData;
+    ProductAdapter adapter;
+    ArrayList<Product> productArrayList;
+    SearchView timkiem;
+    private DatabaseReference mData;
 
     public ProductFragment() {
         // Required empty public constructor
@@ -36,41 +44,56 @@ public class ProductFragment extends Fragment {
         recyclerView = (RecyclerView) v.findViewById(R.id.rcv_dssanpham);
         mData = FirebaseDatabase.getInstance().getReference();
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        productArrayList = new ArrayList<Product>();
+        mData.child("SanPham").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for(DataSnapshot snap : snapshot.getChildren()){
+                    Product p = snap.getValue(Product.class);
+                    productArrayList.add(p);
+                }
+                adapter = new ProductAdapter(productArrayList,v.getContext());
+                LinearLayoutManager linearLayoutManager1 = new LinearLayoutManager(v.getContext());
+                recyclerView.setAdapter(adapter);
+                recyclerView.setLayoutManager(linearLayoutManager1);
+            }
 
-        danhsachRef = mData.child("SanPham");
-        FirebaseRecyclerOptions<Product> options =
-                new FirebaseRecyclerOptions.Builder<Product>()
-                        .setQuery(danhsachRef, new SnapshotParser<Product>() {
-                            @NonNull
-                            @Override
-                            public Product parseSnapshot(@NonNull DataSnapshot snapshot) {
-                                return new Product(snapshot.child("tensp").getValue().toString(),
-                                        snapshot.child("danhmuc").getValue().toString(),
-                                        snapshot.child("link").getValue().toString(),
-                                        snapshot.child("masp").getValue().toString(),
-                                        snapshot.child("giaS").getValue().toString(),
-                                        snapshot.child("giaM").getValue().toString(),
-                                        snapshot.child("giaL").getValue().toString(),
-                                        snapshot.child("giaKM").getValue().toString(),
-                                        snapshot.child("mota").getValue().toString(),
-                                        snapshot.child("ngaydang").getValue().toString());
-                            }
-                        })
-                        .build();
-        adapter = new ProductAdapter(options);
-        recyclerView.setAdapter(adapter);
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        timkiem = v.findViewById(R.id.searchViewProduct);
+        if(timkiem != null){
+            timkiem.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+                @Override
+                public boolean onQueryTextSubmit(String s) {
+                    return false;
+                }
+
+                @Override
+                public boolean onQueryTextChange(String s) {
+                    search(s);
+                    return true;
+                }
+            });
+        }
         return v;
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        adapter.startListening();
+    private void search(String s){
+        ArrayList<Product> list = new ArrayList<>();
+        for(Product obj : productArrayList){
+            if(obj.getTensp().toLowerCase().contains(s.toLowerCase())){
+                list.add(obj);
+            }
+        }
+        ProductAdapter adapter1 = new ProductAdapter(list,getContext());
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        recyclerView.setAdapter(adapter1);
+        recyclerView.setLayoutManager(linearLayoutManager);
     }
 
-    @Override
-    public void onStop() {
-        super.onStop();
-        adapter.stopListening();
-    }
+
 }

@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.coffeebakery.R;
@@ -29,9 +30,11 @@ public class HomeFragment extends Fragment {
     RecyclerView poster, newsp, tapchi;
     NewProdectAdapter adapter;
     PosterAdapter posterAdapter;
+    TapChiAdapter tapChiAdapter;
     NewProdectAdapter newProdectAdapter;
     ArrayList<Poster> posterArrayList;
     ArrayList<NewProduct> newProductArrayList;
+    ArrayList<TapChi> tapChiArrayList;
     private DatabaseReference NewData;
 
     public HomeFragment(){
@@ -92,7 +95,29 @@ public class HomeFragment extends Fragment {
         newProdectAdapter = new NewProdectAdapter(v.getContext(),newProductArrayList);
         newsp.setAdapter(newProdectAdapter);
 
+        //danh sach tap chi
         tapchi = (RecyclerView) v.findViewById(R.id.rcv_Tapchi);
+        tapchi.setLayoutManager(new LinearLayoutManager(v.getContext()));
+        tapChiArrayList = new ArrayList<TapChi>();
+        NewData.child("Post").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for(DataSnapshot snap : snapshot.getChildren()){
+                    TapChi tc = snap.getValue(TapChi.class);
+                    tapChiArrayList.add(tc);
+                }
+                tapChiAdapter = new TapChiAdapter(tapChiArrayList,v.getContext());
+                LinearLayoutManager linearLayoutManager1 = new LinearLayoutManager(v.getContext());
+                tapchi.setAdapter(tapChiAdapter);
+                tapchi.setLayoutManager(linearLayoutManager1);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
 
         return v;
     }

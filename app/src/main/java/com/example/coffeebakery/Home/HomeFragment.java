@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.coffeebakery.R;
@@ -29,9 +30,11 @@ public class HomeFragment extends Fragment {
     RecyclerView poster, newsp, tapchi;
     NewProdectAdapter adapter;
     PosterAdapter posterAdapter;
+    TapChiAdapter tapChiAdapter;
     NewProdectAdapter newProdectAdapter;
     ArrayList<Poster> posterArrayList;
     ArrayList<NewProduct> newProductArrayList;
+    ArrayList<TapChi> tapChiArrayList;
     private DatabaseReference NewData;
 
     public HomeFragment(){
@@ -41,20 +44,31 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = LayoutInflater.from(inflater.getContext()).inflate(R.layout.fragment_home, container, false);
-
+        NewData = FirebaseDatabase.getInstance().getReference();
         //danh sach poster
-        Integer image[] = {R.drawable.a,R.drawable.b,R.drawable.c, R.drawable.d};
+
         poster = (RecyclerView) v.findViewById(R.id.rcv_Poster);
         poster.setLayoutManager(new LinearLayoutManager(v.getContext(), LinearLayoutManager.HORIZONTAL, false));
         poster.setItemAnimator(new DefaultItemAnimator());
-
         posterArrayList = new ArrayList<>();
-        for (int i = 0; i < image.length; i++) {
-            Poster p = new Poster(image[i]);
-            posterArrayList.add(p);
-        }
-        posterAdapter = new PosterAdapter(v.getContext(),posterArrayList);
-        poster.setAdapter(posterAdapter);
+        NewData.child("Poster").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for(DataSnapshot snap : snapshot.getChildren()){
+                    Poster pt = snap.getValue(Poster.class);
+                    posterArrayList.add(pt);
+                }
+                posterAdapter = new PosterAdapter(v.getContext(), posterArrayList);
+                LinearLayoutManager linearLayoutManager = new LinearLayoutManager(v.getContext(),LinearLayoutManager.HORIZONTAL, false);
+                poster.setAdapter(posterAdapter);
+                poster.setLayoutManager(linearLayoutManager);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
         //danh sach san pham moi
         NewData = FirebaseDatabase.getInstance().getReference();
@@ -92,7 +106,30 @@ public class HomeFragment extends Fragment {
         newProdectAdapter = new NewProdectAdapter(v.getContext(),newProductArrayList);
         newsp.setAdapter(newProdectAdapter);
 
+        //danh sach tap chi
         tapchi = (RecyclerView) v.findViewById(R.id.rcv_Tapchi);
+        tapchi.setLayoutManager(new LinearLayoutManager(v.getContext(), LinearLayoutManager.HORIZONTAL, false));
+        tapchi.setItemAnimator(new DefaultItemAnimator());
+        tapChiArrayList = new ArrayList<TapChi>();
+        NewData.child("Post").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for(DataSnapshot snap : snapshot.getChildren()){
+                    TapChi tc = snap.getValue(TapChi.class);
+                    tapChiArrayList.add(tc);
+                }
+                tapChiAdapter = new TapChiAdapter(tapChiArrayList,v.getContext());
+                LinearLayoutManager linearLayoutManager1 = new LinearLayoutManager(v.getContext(),LinearLayoutManager.HORIZONTAL, false);
+                tapchi.setAdapter(tapChiAdapter);
+                tapchi.setLayoutManager(linearLayoutManager1);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
 
         return v;
     }

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Product.ProductFragment">
 
     <LinearLayout
@@ -28,28 +29,15 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
             android:orientation="horizontal"
             android:gravity="center">
 
-            <ImageView
-                android:id="@+id/filter"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/ic_outline_filter_alt_24"/>
-
-            <EditText
+            <SearchView
+                android:id="@+id/searchViewProduct"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/search_bg"
-                android:hint="Tìm kiếm sản phẩm"
-                android:textColor="@color/black"
-                android:textSize="11.7sp"
-                android:layout_marginLeft="10dp"
-                android:padding="10dp"
-                android:inputType="text"
-                android:drawableRight="@drawable/ic_outline_search_24"
-                android:textColorHint="#7e7e7e"/>
+                android:layout_height="37dp"
+                app:queryHint="Search..."
+                android:layout_margin="5dp"/>
 
         </LinearLayout>
 

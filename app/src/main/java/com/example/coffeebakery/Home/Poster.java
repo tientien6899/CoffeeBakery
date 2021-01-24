@@ -1,20 +1,29 @@
 package com.example.coffeebakery.Home;
 
 public class Poster {
-    Integer image;
+    String name, link;
 
     public Poster() {
     }
 
-    public Poster(Integer image) {
-        this.image = image;
+    public Poster(String name, String link) {
+        this.name = name;
+        this.link = link;
     }
 
-    public Integer getImage() {
-        return image;
+    public String getName() {
+        return name;
     }
 
-    public void setImage(Integer image) {
-        this.image = image;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
     }
 }

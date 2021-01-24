@@ -13,72 +13,109 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.coffeebakery.DetailProductActivity;
+import com.example.coffeebakery.Home.TapChiAdapter;
 import com.example.coffeebakery.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
-public class ProductAdapter extends FirebaseRecyclerAdapter<Product,ProductAdapter.Holder> {
-    public ProductAdapter(@NonNull FirebaseRecyclerOptions<Product> options){
-        super(options);
+import java.util.List;
+
+public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.Holder>{
+
+    private List mProduct;
+    private Context context;
+
+    public ProductAdapter(List mProduct, Context context){
+        this.mProduct = mProduct;
+        this.context = context;
+    }
+
+    @NonNull
+    @Override
+    public Holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.custom_item_product,parent,false);
+        return new ProductAdapter.Holder(v);
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull ProductAdapter.Holder holder, int position, @NonNull Product model) {
-
-        holder.tensp.setText(model.getTensp());
-        holder.gias.setText(model.getGiaS() + " đ");
-        holder.mota.setText(model.getMota());
-        Glide.with(holder.hinhanh.getContext()).load(model.getLink()).into(holder.hinhanh);
+    public void onBindViewHolder(@NonNull Holder holder, int position) {
+        Product p = (Product) mProduct.get(position);
+        holder.tensp.setText(p.getTensp());
+        holder.gias.setText(p.getGiaS() + " đ");
+        holder.mota.setText(p.getMota());
+        Glide.with(holder.hinhanh.getContext()).load(p.getLink()).into(holder.hinhanh);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Context context = v.getContext();
                 Intent intent = new Intent(context, DetailProductActivity.class);
-                intent.putExtra("DANHMUC",model.danhmuc);
-                intent.putExtra("TENSP",model.tensp);
-                intent.putExtra("MASP",model.masp);
-                intent.putExtra("GIAS",model.giaS);
-                intent.putExtra("GIAM",model.giaM);
-                intent.putExtra("GIAL",model.giaL);
-                intent.putExtra("GIAKM",model.giaKM);
-                intent.putExtra("LINK",model.link);
-                intent.putExtra("MOTA",model.mota);
+                intent.putExtra("DANHMUC",p.getDanhmuc());
+                intent.putExtra("TENSP",p.getTensp());
+                intent.putExtra("MASP",p.getMasp());
+                intent.putExtra("GIAS",p.getGiaS());
+                intent.putExtra("GIAM",p.getGiaM());
+                intent.putExtra("GIAL",p.getGiaL());
+                intent.putExtra("GIAKM",p.getGiaKM());
+                intent.putExtra("LINK",p.getLink());
+                intent.putExtra("MOTA",p.getMota());
                 context.startActivity(intent);
-
-//                Button xoa = (Button) d.findViewById(R.id.huy);
-//                xoa.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View view) {
-//                        DatabaseReference mData = FirebaseDatabase.getInstance().getReference();
-//                        mData.child("SanPham").child("Coffee").child(model.getMasp()).removeValue();
-//                    }
-//                });
-//                d.show();
 
             }
         });
 
     }
 
-
-    @NonNull
     @Override
-    public ProductAdapter.Holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.custom_item_product, parent, false);
-
-        return new Holder(v);
-
+    public int getItemCount() {
+        return mProduct.size();
     }
-    class Holder extends RecyclerView.ViewHolder{
+
+    public class Holder extends RecyclerView.ViewHolder {
         ImageView hinhanh;
         TextView tensp, gias, mota;
-        public Holder(@NonNull final View itemView) {
+        public Holder(@NonNull View itemView) {
             super(itemView);
             hinhanh = (ImageView)itemView.findViewById(R.id.img_Hinhsp);
             tensp = (TextView)itemView.findViewById(R.id.txt_Tensp);
             gias = (TextView)itemView.findViewById(R.id.txt_GiaspS);
             mota = (TextView)itemView.findViewById(R.id.txt_Mota);
+
+
         }
     }
 }
+
+
+
+//public class ProductAdapter extends FirebaseRecyclerAdapter<Product,ProductAdapter.Holder> {
+//    public ProductAdapter(@NonNull FirebaseRecyclerOptions<Product> options){
+//        super(options);
+//    }
+//
+//    @Override
+//    protected void onBindViewHolder(@NonNull ProductAdapter.Holder holder, int position, @NonNull Product model) {
+//
+
+//
+
+//
+//    }
+//
+//
+//    @NonNull
+//    @Override
+//    public ProductAdapter.Holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+//        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.custom_item_product, parent, false);
+//
+//        return new Holder(v);
+//
+//    }
+//    class Holder extends RecyclerView.ViewHolder{
+
+//        public Holder(@NonNull final View itemView) {
+//            super(itemView);
+
+//        }
+//    }
+//}

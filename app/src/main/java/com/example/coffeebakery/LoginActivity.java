@@ -105,17 +105,9 @@ public class LoginActivity extends AppCompatActivity {
         btndangnhap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-<<<<<<< HEAD
-                String usernamelogin = edtusernamedn.getText().toString().trim();
-                String passwordlogin = edtpassworddn.getText().toString().trim();
-                Dangnhap(usernamelogin, passwordlogin);
-                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                startActivity(intent);
-=======
                 String usernamelogin = edtusernamedn.getText().toString().trim() + "@gmail.com";
                 String passwordlogin = edtpassworddn.getText().toString().trim();
                 Dangnhap(usernamelogin, passwordlogin);
->>>>>>> 44fbdfd638c3e4e1798114e5c6cc579769562e5d
             }
         });
     }

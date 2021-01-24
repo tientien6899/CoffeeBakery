@@ -9,17 +9,18 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.coffeebakery.R;
 
 import java.util.List;
 
 public class PosterAdapter extends RecyclerView.Adapter<PosterAdapter.Holder> {
-    Context context;
-    private List<Poster> listPoster;
+    private Context context;
+    private List mPoster;
 
-    public PosterAdapter(Context context, List<Poster> posterList){
+    public PosterAdapter(Context context, List mPoster){
         this.context = context;
-        this.listPoster = posterList;
+        this.mPoster = mPoster;
     }
 
     @NonNull
@@ -31,13 +32,13 @@ public class PosterAdapter extends RecyclerView.Adapter<PosterAdapter.Holder> {
 
     @Override
     public void onBindViewHolder(@NonNull Holder holder, int position) {
-        Poster p = listPoster.get(position);
-        holder.image.setImageResource(p.getImage());
+        Poster p = (Poster) mPoster.get(position);
+        Glide.with(holder.image.getContext()).load(p.getLink()).into(holder.image);
     }
 
     @Override
     public int getItemCount() {
-        return listPoster.size();
+        return mPoster.size();
     }
 
     public class Holder extends RecyclerView.ViewHolder {

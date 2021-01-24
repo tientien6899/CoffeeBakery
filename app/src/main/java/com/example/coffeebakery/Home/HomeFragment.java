@@ -44,20 +44,31 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = LayoutInflater.from(inflater.getContext()).inflate(R.layout.fragment_home, container, false);
-
+        NewData = FirebaseDatabase.getInstance().getReference();
         //danh sach poster
-        Integer image[] = {R.drawable.a,R.drawable.b,R.drawable.c, R.drawable.d};
+
         poster = (RecyclerView) v.findViewById(R.id.rcv_Poster);
         poster.setLayoutManager(new LinearLayoutManager(v.getContext(), LinearLayoutManager.HORIZONTAL, false));
         poster.setItemAnimator(new DefaultItemAnimator());
-
         posterArrayList = new ArrayList<>();
-        for (int i = 0; i < image.length; i++) {
-            Poster p = new Poster(image[i]);
-            posterArrayList.add(p);
-        }
-        posterAdapter = new PosterAdapter(v.getContext(),posterArrayList);
-        poster.setAdapter(posterAdapter);
+        NewData.child("Poster").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for(DataSnapshot snap : snapshot.getChildren()){
+                    Poster pt = snap.getValue(Poster.class);
+                    posterArrayList.add(pt);
+                }
+                posterAdapter = new PosterAdapter(v.getContext(), posterArrayList);
+                LinearLayoutManager linearLayoutManager = new LinearLayoutManager(v.getContext(),LinearLayoutManager.HORIZONTAL, false);
+                poster.setAdapter(posterAdapter);
+                poster.setLayoutManager(linearLayoutManager);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
         //danh sach san pham moi
         NewData = FirebaseDatabase.getInstance().getReference();
@@ -97,7 +108,8 @@ public class HomeFragment extends Fragment {
 
         //danh sach tap chi
         tapchi = (RecyclerView) v.findViewById(R.id.rcv_Tapchi);
-        tapchi.setLayoutManager(new LinearLayoutManager(v.getContext()));
+        tapchi.setLayoutManager(new LinearLayoutManager(v.getContext(), LinearLayoutManager.HORIZONTAL, false));
+        tapchi.setItemAnimator(new DefaultItemAnimator());
         tapChiArrayList = new ArrayList<TapChi>();
         NewData.child("Post").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -107,7 +119,7 @@ public class HomeFragment extends Fragment {
                     tapChiArrayList.add(tc);
                 }
                 tapChiAdapter = new TapChiAdapter(tapChiArrayList,v.getContext());
-                LinearLayoutManager linearLayoutManager1 = new LinearLayoutManager(v.getContext());
+                LinearLayoutManager linearLayoutManager1 = new LinearLayoutManager(v.getContext(),LinearLayoutManager.HORIZONTAL, false);
                 tapchi.setAdapter(tapChiAdapter);
                 tapchi.setLayoutManager(linearLayoutManager1);
             }

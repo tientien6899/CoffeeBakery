@@ -68,36 +68,6 @@ public class ReceiptFragment extends Fragment {
             }
         });
 
-//        myData =  mData.child("Donhang").child(gmail);
-//        FirebaseRecyclerOptions<Receipt> options =
-//                new FirebaseRecyclerOptions.Builder<Receipt>()
-//                        .setQuery(myData, new SnapshotParser<Receipt>() {
-//                            @NonNull
-//                            @Override
-//                            public Receipt parseSnapshot(@NonNull DataSnapshot snapshot) {
-//                                return new Receipt(snapshot.child("madon").getValue().toString(),
-//                                        snapshot.child("ngaydat").getValue().toString(),
-//                                        snapshot.child("trangthai").getValue().toString(),
-//                                        snapshot.child("tongtien").getValue().toString(),
-//                                        snapshot.child("nguoidung").getValue().toString());
-//                            }
-//                        })
-//                        .build();
-//        adapter = new ReceiptAdapter(options);
-//        recyclerView.setAdapter(adapter);
-
         return v;
     }
-
-//    @Override
-//    public void onStart() {
-//        super.onStart();
-////        adapter.startListening();
-//    }
-//
-//    @Override
-//    public void onStop() {
-//        super.onStop();
-////        adapter.stopListening();
-//    }
 }

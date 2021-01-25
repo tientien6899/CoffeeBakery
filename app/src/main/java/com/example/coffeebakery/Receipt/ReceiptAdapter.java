@@ -83,9 +83,12 @@ public class ReceiptAdapter extends RecyclerView.Adapter<ReceiptAdapter.Holder>{
         String tt = re.getTrangthai();
         if(tt.contains("Hoàn thành")){
             holder.trangthai.setText(tt);
-            holder.trangthai.setTextColor(Color.BLUE);
+            holder.trangthai.setTextColor(Color.GREEN);
         } else if(tt.contains("Đang xử lý")){
             holder.trangthai.setText(tt + "...");
+            holder.trangthai.setTextColor(Color.BLUE);
+        } else {
+            holder.trangthai.setText(tt);
             holder.trangthai.setTextColor(Color.RED);
         }
 

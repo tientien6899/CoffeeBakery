@@ -49,15 +49,20 @@ public class DetailProductActivity extends AppCompatActivity {
         txt_detailtensp.setText(intent.getStringExtra("TENSP"));
         txt_detailgiasp.setText(intent.getStringExtra("GIAS"));
         txt_detailmotasp.setText(intent.getStringExtra("MOTA"));
-        tongtien.setText(txt_detailgiasp.getText().toString().trim());
+        tongtien.setText(txt_detailgiasp.getText().toString().trim() + " đ");
         tensp.setText(intent.getStringExtra("TENSP"));
         String masp = intent.getStringExtra("MASP");
+        String danhmuc = intent.getStringExtra("DANHMUC");
+
+        if(danhmuc.contains("Thức ăn")){
+            rb_vua.setEnabled(false);
+            rb_lon.setEnabled(false);
+        }
 
         //Thiết lập tổng tiền
         final int s = Integer.parseInt(intent.getStringExtra("GIAS"));
         final int m = Integer.parseInt(intent.getStringExtra("GIAM"));
         final int l = Integer.parseInt(intent.getStringExtra("GIAL"));
-
 
         //Thiết lập chọn size
         rb_nho.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -154,6 +159,9 @@ public class DetailProductActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 STT = 1;
+                if(kichthuoc == ""){
+                    kichthuoc = "Nhỏ (S)";
+                }
                 Cart cart = new Cart(String.valueOf(slmon),
                         "Cart" + STT,
                         masp,
@@ -165,11 +173,12 @@ public class DetailProductActivity extends AppCompatActivity {
                         kichthuoc,
                         edt_ghichu.getText().toString().trim(),
                         gmail);
-                myData.child("Taikhoan").child(gmail).child("Giohang").child("Cart" + STT).child(cart.getSttgiohang()).setValue(cart);
-                tongSL += Integer.parseInt(cart.getSoluong());
-                slmon++;
-                Toast.makeText(DetailProductActivity.this, "Thêm sản phẩm vào giỏ hàng thành công !", Toast.LENGTH_SHORT).show();
-            }
+                    myData.child("Taikhoan").child(gmail).child("Giohang").child("Cart" + STT).child(cart.getSttgiohang()).setValue(cart);
+                    tongSL += Integer.parseInt(cart.getSoluong());
+                    slmon++;
+                    Toast.makeText(DetailProductActivity.this, "Thêm sản phẩm vào giỏ hàng thành công !", Toast.LENGTH_SHORT).show();
+                }
+
         });
 
     }

@@ -190,7 +190,8 @@
                             android:layout_marginTop="7dp"
                             android:layout_marginBottom="7dp"
                             android:text="Vừa (M)"
-                            android:textSize="17sp" />
+                            android:textSize="17sp"
+                            android:enabled="true"/>
 
                         <View
                             android:layout_width="match_parent"
@@ -205,7 +206,8 @@
                             android:layout_marginTop="7dp"
                             android:layout_marginBottom="7dp"
                             android:text="Lớn (L)"
-                            android:textSize="17sp" />
+                            android:textSize="17sp"
+                            android:enabled="true"/>
 
                     </RadioGroup>
                 </LinearLayout>

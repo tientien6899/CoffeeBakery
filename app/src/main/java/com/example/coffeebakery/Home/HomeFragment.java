@@ -1,5 +1,7 @@
 package com.example.coffeebakery.Home;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -11,9 +13,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.example.coffeebakery.DanhMuc.CoffeeActivity;
+import com.example.coffeebakery.DanhMuc.FoodActivity;
+import com.example.coffeebakery.DanhMuc.FreezeeActivity;
+import com.example.coffeebakery.DanhMuc.JuiceActivity;
 import com.example.coffeebakery.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -28,7 +36,6 @@ import java.util.Calendar;
 public class HomeFragment extends Fragment {
 
     RecyclerView poster, newsp, tapchi;
-    NewProdectAdapter adapter;
     PosterAdapter posterAdapter;
     TapChiAdapter tapChiAdapter;
     NewProdectAdapter newProdectAdapter;
@@ -36,6 +43,7 @@ public class HomeFragment extends Fragment {
     ArrayList<NewProduct> newProductArrayList;
     ArrayList<TapChi> tapChiArrayList;
     private DatabaseReference NewData;
+    ImageView caphe, freezee, juice, food;
 
     public HomeFragment(){
 
@@ -45,8 +53,8 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         View v = LayoutInflater.from(inflater.getContext()).inflate(R.layout.fragment_home, container, false);
         NewData = FirebaseDatabase.getInstance().getReference();
-        //danh sach poster
 
+        //danh sach poster
         poster = (RecyclerView) v.findViewById(R.id.rcv_Poster);
         poster.setLayoutManager(new LinearLayoutManager(v.getContext(), LinearLayoutManager.HORIZONTAL, false));
         poster.setItemAnimator(new DefaultItemAnimator());
@@ -70,41 +78,6 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        //danh sach san pham moi
-        NewData = FirebaseDatabase.getInstance().getReference();
-        newProductArrayList = new ArrayList<NewProduct>();
-        SimpleDateFormat dateformat = new SimpleDateFormat("dd-MM-yyyy");
-        Calendar calendar = Calendar.getInstance();
-        String ngay = dateformat.format(calendar.getTime());
-        String[] arrngay = ngay.split("-");
-        newsp = (RecyclerView) v.findViewById(R.id.rcv_Sanphammoi);
-        newsp.setLayoutManager(new LinearLayoutManager(v.getContext(), LinearLayoutManager.HORIZONTAL, false));
-        newsp.setItemAnimator(new DefaultItemAnimator());
-        NewData.child("SanPham").addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for(DataSnapshot data : snapshot.getChildren()){
-                    String ngaydang = data.child("ngaydang").getValue().toString();
-                    String[] arrngaydang = ngaydang.split("-");
-                    if(Integer.parseInt(arrngay[2]) <= Integer.parseInt(arrngaydang[2])){
-                        if(Integer.parseInt(arrngaydang[1]) == Integer.parseInt(arrngay[1])){
-                            String ten = data.child("tensp").getValue().toString();
-                            String ma = data.child("masp").getValue().toString();
-                            String gias = data.child("giaS").getValue().toString();
-                            String link = data.child("link").getValue().toString();
-                            newProductArrayList.add(new NewProduct(ma,ten,gias,link,ngaydang));
-                        }
-                    }
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-        newProdectAdapter = new NewProdectAdapter(v.getContext(),newProductArrayList);
-        newsp.setAdapter(newProdectAdapter);
 
         //danh sach tap chi
         tapchi = (RecyclerView) v.findViewById(R.id.rcv_Tapchi);
@@ -129,6 +102,43 @@ public class HomeFragment extends Fragment {
 
             }
         });
+
+        caphe = v.findViewById(R.id.danhmuc_caphe);
+        caphe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), CoffeeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        freezee = v.findViewById(R.id.danhmuc_freezee);
+        freezee.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), FreezeeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        juice = v.findViewById(R.id.danhmuc_juice);
+        juice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), JuiceActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        food = v.findViewById(R.id.danhmuc_food);
+        food.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), FoodActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
 
         return v;

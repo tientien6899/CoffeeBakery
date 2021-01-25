@@ -117,6 +117,7 @@ public class RegisterActivity extends AppCompatActivity {
                 String Strpass = edtpassworddk.getText().toString();
                 String Strrepeatpass = edtrepeatpass.getText().toString();
                 String Stremail = edtusernamedk.getText().toString() + "@gmail.com";
+
                 if(Stremail.contains("@gmail.com"))
                 {
                     if (Strpass.equals(Strrepeatpass)) {

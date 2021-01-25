@@ -11,7 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_logo_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Setting.ThanhToanActivity"></activity>
+        <activity android:name=".DanhMuc.FoodActivity"></activity>
+        <activity android:name=".DanhMuc.JuiceActivity" />
+        <activity android:name=".DanhMuc.FreezeeActivity" />
+        <activity android:name=".DanhMuc.CoffeeActivity" />
+        <activity android:name=".Setting.ThanhToanActivity" />
         <activity android:name=".Setting.VanChuyenActivity" />
         <activity android:name=".Setting.ChungActivity" />
         <activity android:name=".Setting.BaoMatActivity" />

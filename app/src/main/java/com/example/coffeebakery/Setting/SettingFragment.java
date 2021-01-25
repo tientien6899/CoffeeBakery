@@ -1,6 +1,8 @@
 package com.example.coffeebakery.Setting;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -10,17 +12,23 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
+import com.example.coffeebakery.LoginActivity;
 import com.example.coffeebakery.Profile;
 import com.example.coffeebakery.ProfileActivity;
 import com.example.coffeebakery.R;
 
 import java.util.ArrayList;
 
+import static com.example.coffeebakery.LoginActivity.gmail;
+
 public class SettingFragment extends Fragment {
 
     LinearLayout chinhsachchung, baomat, thanhtoan, vanchuyen, thongtincanhan, thongtinlienhe;
+    Button dangxuat;
 
     public SettingFragment() {
         // Required empty public constructor
@@ -89,6 +97,31 @@ public class SettingFragment extends Fragment {
                 Context context = view.getContext();
                 Intent intent = new Intent(context, ProfileActivity.class);
                 context.startActivity(intent);
+            }
+        });
+
+        dangxuat = v.findViewById(R.id.setting_dangxuat);
+        dangxuat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
+                builder.setMessage("Bạn có chắc là muốn đăng xuất không?");
+                builder.setNeutralButton("Quay lại", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                })
+                        .setPositiveButton("Đăng xuất", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                gmail = "";
+                                Toast.makeText(v.getContext(), "Hẹn gặp lại bạn nhé!", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(view.getContext(), LoginActivity.class);
+                                startActivity(intent);
+                                dialogInterface.cancel();
+                            }
+                        }).show();
             }
         });
 

@@ -48,13 +48,15 @@
             android:orientation="vertical">
 
             <TextView
+                android:textSize="30sp"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:text="Chính sách bảo mật"
                 android:gravity="center|left"
                 android:layout_margin="10dp"/>
 
             <TextView
+                android:textSize="20sp"
                 android:id="@+id/baomat_noidung"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

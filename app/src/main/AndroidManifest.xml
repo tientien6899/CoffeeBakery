@@ -11,7 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_logo_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DanhMuc.FoodActivity"></activity>
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".DanhMuc.FoodActivity" />
         <activity android:name=".DanhMuc.JuiceActivity" />
         <activity android:name=".DanhMuc.FreezeeActivity" />
         <activity android:name=".DanhMuc.CoffeeActivity" />
@@ -34,11 +41,7 @@
         <activity android:name=".ProfileActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

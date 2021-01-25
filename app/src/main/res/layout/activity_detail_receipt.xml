@@ -14,8 +14,9 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:onClick="back"
             android:id="@+id/img_BackDSSP"
-            android:layout_width="35dp"
+            android:layout_width="27dp"
             android:layout_height="35dp"
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"

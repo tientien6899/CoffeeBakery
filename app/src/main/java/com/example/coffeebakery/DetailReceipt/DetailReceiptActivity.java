@@ -7,8 +7,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
+import com.example.coffeebakery.HomeActivity;
 import com.example.coffeebakery.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -111,5 +113,10 @@ public class DetailReceiptActivity extends AppCompatActivity {
         tongmon = (TextView) findViewById(R.id.txt_Soluongmon);
         tongcong = (TextView) findViewById(R.id.txt_Tongcong);
         phigh = (TextView) findViewById(R.id.txt_Phigiaohang);
+    }
+
+    public void back(View view) {
+        Intent intent = new Intent(DetailReceiptActivity.this, HomeActivity.class);
+        startActivity(intent);
     }
 }

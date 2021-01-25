@@ -11,16 +11,21 @@
         android:roundIcon="@mipmap/ic_launcher_logo_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Home.DetailTapChiActivity"></activity>
+        <activity android:name=".Setting.ThanhToanActivity"></activity>
+        <activity android:name=".Setting.VanChuyenActivity" />
+        <activity android:name=".Setting.ChungActivity" />
+        <activity android:name=".Setting.BaoMatActivity" />
+        <activity android:name=".Setting.LienHeActivity" />
+        <activity android:name=".Home.DetailTapChiActivity" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/map_api_key" />
 
-        <activity android:name=".DeliveryActivity"></activity>
+        <activity android:name=".DeliveryActivity" />
         <activity android:name=".DetailReceipt.DetailReceiptActivity" />
         <activity android:name=".DetailProductActivity" />
-        <activity android:name=".HomeActivity"/>
+        <activity android:name=".HomeActivity" />
         <activity android:name=".ForgotPasswordActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".RegisterActivity" />

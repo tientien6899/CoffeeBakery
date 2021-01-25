@@ -23,6 +23,7 @@
                 android:textColor="@color/black"
                 android:textSize="17sp"
                 android:textStyle="bold" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -32,6 +33,7 @@
             android:layout_weight="1"
             android:layout_margin="10dp">
 
+<!--            chinh sach chung-->
             <LinearLayout
                 android:id="@+id/setting_setting1"
                 android:layout_width="match_parent"
@@ -57,6 +59,7 @@
 
             </LinearLayout>
 
+            <!--            chinh sach chung-->
             <LinearLayout
                 android:id="@+id/setting_setting2"
                 android:layout_width="match_parent"
@@ -81,9 +84,61 @@
                     android:textStyle="bold"/>
 
             </LinearLayout>
-
+<!--            chinh sach thanh toan-->
             <LinearLayout
                 android:id="@+id/setting_setting3"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Chính sách thanh toán"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:textSize="17dp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+<!--            chinh sach van chuyen-->
+            <LinearLayout
+                android:id="@+id/setting_setting4"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Chính sách vận chuyển"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:textSize="17dp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+<!--            thong tin lien he-->
+            <LinearLayout
+                android:id="@+id/setting_setting6"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:orientation="horizontal"
@@ -107,8 +162,9 @@
 
             </LinearLayout>
 
+<!--            thong tin ca nhan-->
             <LinearLayout
-                android:id="@+id/setting_setting4"
+                android:id="@+id/setting_setting7"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:orientation="horizontal"

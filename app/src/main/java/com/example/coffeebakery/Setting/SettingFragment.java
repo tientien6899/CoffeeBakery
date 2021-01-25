@@ -20,7 +20,7 @@ import java.util.ArrayList;
 
 public class SettingFragment extends Fragment {
 
-    LinearLayout thongtincanhan;
+    LinearLayout chinhsachchung, baomat, thanhtoan, vanchuyen, thongtincanhan, thongtinlienhe;
 
     public SettingFragment() {
         // Required empty public constructor
@@ -30,7 +30,59 @@ public class SettingFragment extends Fragment {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_setting, container, false);
 
-        thongtincanhan = v.findViewById(R.id.setting_setting4);
+        chinhsachchung = v.findViewById(R.id.setting_setting1);
+        chinhsachchung.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Context context = view.getContext();
+                Intent intent = new Intent(context, ChungActivity.class);
+                context.startActivity(intent);
+            }
+        });
+
+        baomat = v.findViewById(R.id.setting_setting2);
+        baomat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Context context = view.getContext();
+                Intent intent = new Intent(context, BaoMatActivity.class);
+                context.startActivity(intent);
+            }
+        });
+
+        thanhtoan = v.findViewById(R.id.setting_setting3);
+        thanhtoan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Context context = view.getContext();
+                Intent intent = new Intent(context, ThanhToanActivity.class);
+                context.startActivity(intent);
+            }
+        });
+
+        vanchuyen = v.findViewById(R.id.setting_setting4);
+        vanchuyen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Context context = view.getContext();
+                Intent intent = new Intent(context, VanChuyenActivity.class);
+                context.startActivity(intent);
+            }
+        });
+
+
+        thongtinlienhe = v.findViewById(R.id.setting_setting6);
+        thongtinlienhe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Context context = view.getContext();
+                Intent intent = new Intent(context, LienHeActivity.class);
+                context.startActivity(intent);
+            }
+        });
+
+
+        thongtincanhan = v.findViewById(R.id.setting_setting7);
         thongtincanhan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -39,7 +91,6 @@ public class SettingFragment extends Fragment {
                 context.startActivity(intent);
             }
         });
-
 
         return v;
     }

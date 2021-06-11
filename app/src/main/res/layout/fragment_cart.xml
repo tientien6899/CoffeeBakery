@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Cart.CartFragment">
 
     <LinearLayout
@@ -12,18 +13,26 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:background="@color/white"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1"
                 android:text="Giỏ hàng"
-                android:gravity="center"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="17sp"  />
+                android:textColor="@color/green"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="22dp"
+                android:background="@drawable/ic_baseline_notifications_24" />
         </LinearLayout>
 
         <LinearLayout
@@ -41,17 +50,12 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="160dp"
-            android:background="@color/white"
+            android:layout_height="120dp"
+            android:background="@drawable/bg_giohang"
             android:orientation="vertical">
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:background="#f1f1f1"/>
-
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="40dp"
                 android:gravity="center"
                 android:layout_marginRight="15dp"
                 android:layout_marginLeft="15dp"
@@ -62,9 +66,8 @@
                     android:layout_height="wrap_content"
                     android:gravity="center|left"
                     android:text="Số lượng"
-                    android:textColor="@color/background"
-                    android:textSize="21dp"
-                    android:textStyle="bold" />
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
 
                 <TextView
                     android:id="@+id/txt_CartTongSL"
@@ -72,14 +75,34 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center|right"
-                    android:textColor="@color/black"
-                    android:textSize="23dp"
+                    android:layout_marginRight="5dp"
+                    android:textColor="@color/yellow"
+                    android:textSize="17dp"
                     android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="món"
+                    android:textColor="@color/yellow"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+
             </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:background="@color/skin"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="40dp"
                 android:gravity="center"
                 android:layout_marginRight="15dp"
                 android:layout_marginLeft="15dp"
@@ -90,9 +113,8 @@
                     android:layout_height="wrap_content"
                     android:gravity="center|left"
                     android:text="Tạm tính"
-                    android:textColor="@color/background"
-                    android:textSize="21dp"
-                    android:textStyle="bold" />
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
 
                 <TextView
                     android:id="@+id/txt_Tamtinh"
@@ -100,14 +122,23 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center|right"
-                    android:textColor="@color/black"
-                    android:textSize="23dp"
+                    android:textColor="@color/yellow"
+                    android:layout_marginRight="5dp"
+                    android:textSize="22dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="đ"
+                    android:textColor="@color/yellow"
+                    android:textSize="22dp"
                     android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="30dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:gravity="center">
@@ -117,9 +148,9 @@
                     android:layout_height="wrap_content"
                     android:text="Tiến hành đặt hàng"
                     android:textAllCaps="false"
-                    android:textColor="@color/background"
-                    android:background="@drawable/blue_border_rounded_cornwe"
-                    android:textSize="21dp"
+                    android:textColor="@color/green"
+                    android:background="@drawable/button_tienhanhdathang"
+                    android:textSize="15dp"
                     android:textStyle="bold"/>
             </LinearLayout>
         </LinearLayout>

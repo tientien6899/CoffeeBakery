@@ -19,13 +19,13 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/menu_bottom_navigation"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_gravity="bottom"
+        android:layout_height="70dp"
+        app:menu="@menu/menu"
         android:background="@color/white"
-        app:itemIconSize="25dp"
-        app:itemIconTint="#000000"
-        app:itemTextColor="@color/background"
-        app:menu="@menu/menu">
+        app:itemTextColor="@color/green"
+        app:itemIconSize="30dp"
+        android:layout_gravity="bottom"
+        app:itemIconTint="@color/green">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 </LinearLayout>

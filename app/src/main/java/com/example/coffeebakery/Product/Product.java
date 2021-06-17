@@ -10,13 +10,17 @@ public class Product {
     String giaL;
     String giaKM;
     String mota;
+    int luotmua;
+    int luotyeuthich;
 
     String ngaydang;
 
     public Product() {
     }
 
-    public Product(String tensp, String danhmuc, String link, String masp, String giaS, String giaM, String giaL, String giaKM, String mota, String ngaydang) {
+    public Product(String tensp, String danhmuc, String link, String masp,
+                   String giaS, String giaM, String giaL, String giaKM,
+                   String mota, String ngaydang, int mua, int yeuthich) {
         this.tensp = tensp;
         this.danhmuc = danhmuc;
         this.link = link;
@@ -27,6 +31,8 @@ public class Product {
         this.giaKM = giaKM;
         this.mota = mota;
         this.ngaydang = ngaydang;
+        this.luotmua = mua;
+        this.luotyeuthich = yeuthich;
     }
 
     public String getTensp() {
@@ -107,5 +113,21 @@ public class Product {
 
     public void setNgaydang(String ngaydang) {
         this.ngaydang = ngaydang;
+    }
+
+    public int getLuotMua() {
+        return luotmua;
+    }
+
+    public void setLuotMua(int mua) {
+        this.luotmua = mua;
+    }
+
+    public int getLuotYeuThich() {
+        return luotyeuthich;
+    }
+
+    public void setLuotYeuThich(int thich) {
+        this.luotyeuthich = thich;
     }
 }

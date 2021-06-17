@@ -43,26 +43,25 @@ public class NewProdectAdapter extends RecyclerView.Adapter<NewProdectAdapter.Ho
         holder.newgias.setText(p.getGiaS() + " đ");
         Glide.with(holder.newhinhanh.getContext()).load(p.getLink()).into(holder.newhinhanh);
 
-//        holder.itemView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Context context = v.getContext();
-//                Intent intent = new Intent(context, DetailProductActivity.class);
-//                intent.putExtra("DANHMUC",p.getDanhmuc());
-//                intent.putExtra("TENSP",p.getTensp());
-//                intent.putExtra("MASP",p.getMasp());
-//                intent.putExtra("GIAS",p.getGiaS());
-//                intent.putExtra("GIAM",p.getGiaM());
-//                intent.putExtra("GIAL",p.getGiaL());
-//                intent.putExtra("GIAKM",p.getGiaKM());
-//                intent.putExtra("LINK",p.getLink());
-//                intent.putExtra("MOTA",p.getMota());
-//                intent.putExtra("MUA",p.getLuotMua());
-//                intent.putExtra("THICH",p.getLuotYeuThich());
-//                context.startActivity(intent);
-//
-//            }
-//        });
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Context context = v.getContext();
+                Intent intent = new Intent(context, DetailProductActivity.class);
+                intent.putExtra("DANHMUC",p.getDanhmuc());
+                intent.putExtra("TENSP",p.getTensp());
+                intent.putExtra("MASP",p.getMasp());
+                intent.putExtra("GIAS",p.getGiaS());
+                intent.putExtra("GIAM",p.getGiaM());
+                intent.putExtra("GIAL",p.getGiaL());
+                intent.putExtra("GIAKM",p.getGiaKM());
+                intent.putExtra("LINK",p.getLink());
+                intent.putExtra("MOTA",p.getMota());
+                intent.putExtra("MUA",p.getLuotMua());
+                intent.putExtra("THICH",p.getLuotYeuThich());
+                context.startActivity(intent);
+            }
+        });
 
     }
 

@@ -1,6 +1,7 @@
 package com.example.coffeebakery.Home;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.coffeebakery.DetailProductActivity;
 import com.example.coffeebakery.Product.Product;
 import com.example.coffeebakery.R;
 
@@ -39,26 +41,25 @@ public class BanChayAdapter extends RecyclerView.Adapter<BanChayAdapter.Holder>{
         holder.newgias.setText(p.getGiaS() + " đ");
         Glide.with(holder.newhinhanh.getContext()).load(p.getLink()).into(holder.newhinhanh);
 
-//        holder.itemView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Context context = v.getContext();
-//                Intent intent = new Intent(context, DetailProductActivity.class);
-//                intent.putExtra("DANHMUC",p.getDanhmuc());
-//                intent.putExtra("TENSP",p.getTensp());
-//                intent.putExtra("MASP",p.getMasp());
-//                intent.putExtra("GIAS",p.getGiaS());
-//                intent.putExtra("GIAM",p.getGiaM());
-//                intent.putExtra("GIAL",p.getGiaL());
-//                intent.putExtra("GIAKM",p.getGiaKM());
-//                intent.putExtra("LINK",p.getLink());
-//                intent.putExtra("MOTA",p.getMota());
-//                intent.putExtra("MUA",p.getLuotMua());
-//                intent.putExtra("THICH",p.getLuotYeuThich());
-//                context.startActivity(intent);
-//
-//            }
-//        });
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Context context = v.getContext();
+                Intent intent = new Intent(context, DetailProductActivity.class);
+                intent.putExtra("DANHMUC",p.getDanhmuc());
+                intent.putExtra("TENSP",p.getTensp());
+                intent.putExtra("MASP",p.getMasp());
+                intent.putExtra("GIAS",p.getGiaS());
+                intent.putExtra("GIAM",p.getGiaM());
+                intent.putExtra("GIAL",p.getGiaL());
+                intent.putExtra("GIAKM",p.getGiaKM());
+                intent.putExtra("LINK",p.getLink());
+                intent.putExtra("MOTA",p.getMota());
+                intent.putExtra("MUA",p.getLuotMua());
+                intent.putExtra("THICH",p.getLuotYeuThich());
+                context.startActivity(intent);
+            }
+        });
 
     }
 

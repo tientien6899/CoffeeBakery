@@ -46,7 +46,7 @@
                 android:layout_height="wrap_content"
                 android:clipToPadding="false"
                 android:nestedScrollingEnabled="false"
-                android:paddingLeft="16.7dp" />
+                android:paddingLeft="12.7dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -216,7 +216,7 @@
                 android:layout_height="wrap_content"
                 android:clipToPadding="false"
                 android:nestedScrollingEnabled="false"
-                android:paddingLeft="16.7dp"
+                android:paddingLeft="12.7dp"
                 android:paddingTop="16.7dp" />
 
             <LinearLayout
@@ -250,7 +250,7 @@
                 android:layout_height="wrap_content"
                 android:clipToPadding="false"
                 android:nestedScrollingEnabled="false"
-                android:paddingLeft="16.7dp"
+                android:paddingLeft="12.7dp"
                 android:paddingTop="16.7dp" />
 
             <LinearLayout

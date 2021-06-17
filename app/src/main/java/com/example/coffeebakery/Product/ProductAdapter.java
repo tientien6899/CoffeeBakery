@@ -59,6 +59,8 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.Holder>{
                 intent.putExtra("GIAKM",p.getGiaKM());
                 intent.putExtra("LINK",p.getLink());
                 intent.putExtra("MOTA",p.getMota());
+                intent.putExtra("MUA",p.getLuotMua());
+                intent.putExtra("THICH",p.getLuotYeuThich());
                 context.startActivity(intent);
 
             }
@@ -80,42 +82,6 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.Holder>{
             tensp = (TextView)itemView.findViewById(R.id.txt_Tensp);
             gias = (TextView)itemView.findViewById(R.id.txt_GiaspS);
             mota = (TextView)itemView.findViewById(R.id.txt_Mota);
-
-
         }
     }
 }
-
-
-
-//public class ProductAdapter extends FirebaseRecyclerAdapter<Product,ProductAdapter.Holder> {
-//    public ProductAdapter(@NonNull FirebaseRecyclerOptions<Product> options){
-//        super(options);
-//    }
-//
-//    @Override
-//    protected void onBindViewHolder(@NonNull ProductAdapter.Holder holder, int position, @NonNull Product model) {
-//
-
-//
-
-//
-//    }
-//
-//
-//    @NonNull
-//    @Override
-//    public ProductAdapter.Holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-//        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.custom_item_product, parent, false);
-//
-//        return new Holder(v);
-//
-//    }
-//    class Holder extends RecyclerView.ViewHolder{
-
-//        public Holder(@NonNull final View itemView) {
-//            super(itemView);
-
-//        }
-//    }
-//}

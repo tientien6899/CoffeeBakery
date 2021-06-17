@@ -1,7 +1,6 @@
 package com.example.coffeebakery.Home;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,32 +11,29 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.coffeebakery.DetailProductActivity;
 import com.example.coffeebakery.Product.Product;
-import com.example.coffeebakery.Product.ProductAdapter;
 import com.example.coffeebakery.R;
 
 import java.util.List;
 
-public class NewProdectAdapter extends RecyclerView.Adapter<NewProdectAdapter.Holder> {
-
+public class BanChayAdapter extends RecyclerView.Adapter<BanChayAdapter.Holder>{
     private List mProduct;
     private Context context;
 
-    public NewProdectAdapter(List mProduct, Context context){
+    public BanChayAdapter(List mProduct, Context context){
         this.mProduct = mProduct;
         this.context = context;
     }
 
     @NonNull
     @Override
-    public NewProdectAdapter.Holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public BanChayAdapter.Holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.custom_new_product,parent,false);
-        return new NewProdectAdapter.Holder(v);
+        return new BanChayAdapter.Holder(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull NewProdectAdapter.Holder holder, int position) {
+    public void onBindViewHolder(@NonNull BanChayAdapter.Holder holder, int position) {
         Product p = (Product) mProduct.get(position);
         holder.newtensp.setText(p.getTensp());
         holder.newgias.setText(p.getGiaS() + " đ");
@@ -82,5 +78,3 @@ public class NewProdectAdapter extends RecyclerView.Adapter<NewProdectAdapter.Ho
         }
     }
 }
-
-

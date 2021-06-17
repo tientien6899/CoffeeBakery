@@ -22,12 +22,15 @@ import com.example.coffeebakery.DanhMuc.CoffeeActivity;
 import com.example.coffeebakery.DanhMuc.FoodActivity;
 import com.example.coffeebakery.DanhMuc.FreezeeActivity;
 import com.example.coffeebakery.DanhMuc.JuiceActivity;
+import com.example.coffeebakery.Product.Product;
+import com.example.coffeebakery.Product.ProductAdapter;
 import com.example.coffeebakery.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.type.DateTime;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -35,13 +38,16 @@ import java.util.Calendar;
 
 public class HomeFragment extends Fragment {
 
-    RecyclerView poster, newsp, tapchi;
+    RecyclerView poster, newsp, tapchi, banchay;
     PosterAdapter posterAdapter;
     TapChiAdapter tapChiAdapter;
+    BanChayAdapter banchayAdapter;
     NewProdectAdapter newProdectAdapter;
+
     ArrayList<Poster> posterArrayList;
-    ArrayList<NewProduct> newProductArrayList;
+    ArrayList<Product> banchayArrayList, newProductArrayList;
     ArrayList<TapChi> tapChiArrayList;
+
     private DatabaseReference NewData;
     ImageView caphe, freezee, juice, food;
 
@@ -78,6 +84,64 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        //danh sach san pham moi
+        newsp = (RecyclerView) v.findViewById(R.id.rcv_Sanphammoi);
+        newsp.setLayoutManager(new LinearLayoutManager(v.getContext(), LinearLayoutManager.HORIZONTAL, false));
+        newsp.setItemAnimator(new DefaultItemAnimator());
+        newProductArrayList = new ArrayList<Product>();
+        NewData.child("SanPham").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for(DataSnapshot snap : snapshot.getChildren()){
+                    Product p = snap.getValue(Product.class);
+                    String temp_ngay_dang = p.getNgaydang();
+                    int truoc = temp_ngay_dang.indexOf("-") + 1;
+                    int sau = temp_ngay_dang.lastIndexOf("-");
+                    String temp = temp_ngay_dang;
+                    String ngaydang = temp.substring(truoc,sau);
+                    Calendar ca = Calendar.getInstance();
+                    int month = ca.get(Calendar.MONTH) + 1;
+                    if(Integer.parseInt(ngaydang) == month)
+                        newProductArrayList.add(p);
+
+                }
+                newProdectAdapter = new NewProdectAdapter(newProductArrayList, v.getContext());
+                LinearLayoutManager linearLayoutManager1 = new LinearLayoutManager(v.getContext(),LinearLayoutManager.HORIZONTAL, false);
+                newsp.setAdapter(newProdectAdapter);
+                newsp.setLayoutManager(linearLayoutManager1);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        //danh sach san pham ban chay
+        banchay = (RecyclerView) v.findViewById(R.id.rcv_Sanphambanchay);
+        banchay.setLayoutManager(new LinearLayoutManager(v.getContext(), LinearLayoutManager.HORIZONTAL, false));
+        banchay.setItemAnimator(new DefaultItemAnimator());
+        banchayArrayList = new ArrayList<Product>();
+        NewData.child("SanPham").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for(DataSnapshot snap : snapshot.getChildren()){
+                    Product p = snap.getValue(Product.class);
+                    int temp_mua = p.getLuotMua();
+                    if(temp_mua > 0)
+                        banchayArrayList.add(p);
+                }
+                banchayAdapter = new BanChayAdapter(banchayArrayList,v.getContext());
+                LinearLayoutManager linearLayoutManager1 = new LinearLayoutManager(v.getContext(),LinearLayoutManager.HORIZONTAL, false);
+                banchay.setAdapter(banchayAdapter);
+                banchay.setLayoutManager(linearLayoutManager1);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
         //danh sach tap chi
         tapchi = (RecyclerView) v.findViewById(R.id.rcv_Tapchi);

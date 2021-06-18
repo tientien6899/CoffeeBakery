@@ -31,6 +31,7 @@ import static com.example.coffeebakery.DetailProductActivity.STT;
 import static com.example.coffeebakery.DetailProductActivity.slmon;
 import static com.example.coffeebakery.LoginActivity.gmail;
 import static com.example.coffeebakery.HomeActivity.mData;
+import static com.example.coffeebakery.LoginActivity.uid;
 
 public class CartFragment extends Fragment {
     private DatabaseReference myData;
@@ -49,7 +50,7 @@ public class CartFragment extends Fragment {
 
         recyclerView = (RecyclerView) v.findViewById(R.id.rcv_dsgiohang);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        myData =  mData.child("Taikhoan").child(gmail).child("Giohang").child("Cart"+STT);
+        myData =  mData.child("Giỏ hàng").child(uid).child("Cart"+STT);
         FirebaseRecyclerOptions<Cart> options =
                 new FirebaseRecyclerOptions.Builder<Cart>()
                         .setQuery(myData, new SnapshotParser<Cart>() {
@@ -76,7 +77,7 @@ public class CartFragment extends Fragment {
         tongsl = (TextView) v.findViewById(R.id.txt_CartTongSL);
         tamtinh = (TextView) v.findViewById(R.id.txt_Tamtinh);
 
-        mData.child("Taikhoan").child(gmail).child("Giohang").child("Cart"+STT).addValueEventListener(new ValueEventListener() {
+        mData.child("Giỏ hàng").child(uid).child("Cart"+STT).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 int a = 0, b = 0;
@@ -86,9 +87,8 @@ public class CartFragment extends Fragment {
                     if(ma.contains("Cart"+STT)){
                         String sl = data.child("soluong").getValue().toString();
                         String gia = data.child("tongtien").getValue().toString();
-                        temp_gia = gia.substring(0, gia.indexOf("đ")-1);
-                            a += Integer.parseInt(sl);
-                            b += Integer.parseInt(String.valueOf(temp_gia));
+                        a += Integer.parseInt(sl);
+                        b += Integer.parseInt(gia);
                     }
                 }
                 tongsl.setText(a+"");
@@ -124,7 +124,7 @@ public class CartFragment extends Fragment {
                                         mData.child("DonHang").child(re.getMadon()).setValue(re);
 
                                         //tạo giỏ hàng
-                                        mData.child("Taikhoan").child(gmail).child("Giohang").child("Cart"+STT).addListenerForSingleValueEvent(new ValueEventListener() {
+                                        mData.child("Giỏ hàng").child(uid).child("Cart"+STT).addListenerForSingleValueEvent(new ValueEventListener() {
                                         @Override
                                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                                             for(DataSnapshot data : snapshot.getChildren()){
@@ -150,7 +150,7 @@ public class CartFragment extends Fragment {
                                             }
                                             STT = 0;
                                             slmon = 1;
-                                            mData.child("Taikhoan").child(gmail).child("Giohang").child("Cart1").removeValue();
+                                            mData.child("Giỏ hàng").child(uid).child("Cart1").removeValue();
                                         }
 
                                         @Override

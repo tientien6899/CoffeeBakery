@@ -41,7 +41,14 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.Holder>{
     public void onBindViewHolder(@NonNull Holder holder, int position) {
         Product p = (Product) mProduct.get(position);
         holder.tensp.setText(p.getTensp());
-        holder.gias.setText(p.getGiaS() + " đ");
+        int temp_gias = Integer.parseInt(p.getGiaS());
+        if(temp_gias >= 1000000){
+            temp_gias = temp_gias / 1000000;
+            holder.gias.setText(temp_gias + ".000.000 ");
+        }else if (temp_gias >= 1000){
+            temp_gias = temp_gias / 1000;
+            holder.gias.setText(temp_gias + ".000 ");
+        }
         holder.mota.setText(p.getMota());
         Glide.with(holder.hinhanh.getContext()).load(p.getLink()).into(holder.hinhanh);
 

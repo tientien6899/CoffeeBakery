@@ -21,7 +21,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import static com.example.coffeebakery.Cart.CartFragment.tongSL;
-import static com.example.coffeebakery.LoginActivity.gmail;
+import static com.example.coffeebakery.LoginActivity.uid;
 
 public class DetailProductActivity extends AppCompatActivity {
 
@@ -47,9 +47,19 @@ public class DetailProductActivity extends AppCompatActivity {
         Glide.with(DetailProductActivity.this).load(intent.getStringExtra("LINK")).into(img_detailhinhsp);
         String link = intent.getStringExtra("LINK");
         txt_detailtensp.setText(intent.getStringExtra("TENSP"));
-        txt_detailgiasp.setText(intent.getStringExtra("GIAS"));
+
+        int temp_giasp = Integer.parseInt(intent.getStringExtra("GIAS"));
+        if(temp_giasp >= 1000000){
+            temp_giasp = temp_giasp / 1000000;
+            txt_detailgiasp.setText(temp_giasp + ".000.000 ");
+        } else if(temp_giasp >= 1000){
+            temp_giasp = temp_giasp / 1000;
+            txt_detailgiasp.setText(temp_giasp + ".000 ");
+        }
+
+//        txt_detailgiasp.setText(intent.getStringExtra("GIAS"));
         txt_detailmotasp.setText(intent.getStringExtra("MOTA"));
-        tongtien.setText(txt_detailgiasp.getText().toString().trim() + " đ");
+        tongtien.setText(txt_detailgiasp.getText().toString().trim());
         tensp.setText(intent.getStringExtra("TENSP"));
         String masp = intent.getStringExtra("MASP");
         String danhmuc = intent.getStringExtra("DANHMUC");
@@ -70,8 +80,22 @@ public class DetailProductActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
                     int sl = Integer.parseInt(txt_soluongsp.getText().toString().trim());
-                    tongtien.setText(String.valueOf(s*sl) + " đ");
-                    txt_detailgiasp.setText(s + "");
+                    int temp_ssl = s * sl;
+                    if(temp_ssl >= 1000000){
+                        temp_ssl = temp_ssl / 1000000;
+                        tongtien.setText(temp_ssl + ".000.000 ");
+                    } else if(temp_ssl >= 1000){
+                        temp_ssl = temp_ssl / 1000;
+                        tongtien.setText(temp_ssl + ".000 ");
+                    }
+                    int temp_s = s;
+                    if(temp_s >= 1000000){
+                        temp_s = temp_s / 1000000;
+                        txt_detailgiasp.setText(temp_s + ".000.000 ");
+                    } else if(temp_s >= 1000){
+                        temp_s = temp_s / 1000;
+                        txt_detailgiasp.setText(temp_s + ".000 ");
+                    }
                     kichthuoc = "Nhỏ (S)";
                 }
             }
@@ -82,8 +106,22 @@ public class DetailProductActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
                     int sl = Integer.parseInt(txt_soluongsp.getText().toString().trim());
-                    tongtien.setText(String.valueOf(m * sl) + " đ");
-                    txt_detailgiasp.setText(m + "");
+                    int temp_msl = m * sl;
+                    if(temp_msl >= 1000000){
+                        temp_msl = temp_msl / 1000000;
+                        tongtien.setText(temp_msl + ".000.000 ");
+                    } else if(temp_msl >= 1000){
+                        temp_msl = temp_msl / 1000;
+                        tongtien.setText(temp_msl + ".000 ");
+                    }
+                    int temp_m = m;
+                    if(temp_m >= 1000000){
+                        temp_m = temp_m / 1000000;
+                        txt_detailgiasp.setText(temp_m + ".000.000 ");
+                    } else if(temp_m >= 1000){
+                        temp_m = temp_m / 1000;
+                        txt_detailgiasp.setText(temp_m + ".000 ");
+                    }
                     kichthuoc = "Vừa (M)";
                 }
             }
@@ -94,25 +132,41 @@ public class DetailProductActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
                     int sl = Integer.parseInt(txt_soluongsp.getText().toString().trim());
-                    tongtien.setText(String.valueOf(l * sl) + " đ");
+                    tongtien.setText(String.valueOf(l * sl));
                     txt_detailgiasp.setText(l + "");
+                    int temp_lsl = l * sl;
+                    if(temp_lsl >= 1000000){
+                        temp_lsl = temp_lsl / 1000000;
+                        tongtien.setText(temp_lsl + ".000.000 ");
+                    } else if(temp_lsl >= 1000){
+                        temp_lsl = temp_lsl / 1000;
+                        tongtien.setText(temp_lsl + ".000 ");
+                    }
+                    int temp_l = l;
+                    if(temp_l >= 1000000){
+                        temp_l = temp_l / 1000000;
+                        txt_detailgiasp.setText(temp_l + ".000.000 ");
+                    } else if(temp_l >= 1000){
+                        temp_l = temp_l / 1000;
+                        txt_detailgiasp.setText(temp_l + ".000 ");
+                    }
                     kichthuoc = "Lớn (L)";
                 }
             }
         });
-        int sluong = Integer.parseInt(txt_soluongsp.getText().toString().trim());
-        final int[] a = {sluong};
+        final int[] sluong = {Integer.parseInt(txt_soluongsp.getText().toString())};
+
          //Nút giảm số lượng
         btn_giam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                a[0] -= 1;
-                if (a[0] == 1) {
+                sluong[0] -= 1;
+
+                if (sluong[0] == 1) {
                     btn_giam.setVisibility(View.INVISIBLE);
                 }
-                tongSL = tongSL - Integer.parseInt(txt_soluongsp.getText().toString().trim()) + a[0];
-                txt_soluongsp.setText(String.valueOf(a[0]));
-                tongsl.setText(String.valueOf(a[0]));
+                tongSL = tongSL - Integer.parseInt(txt_soluongsp.getText().toString().trim()) + sluong[0];
+                txt_soluongsp.setText(String.valueOf(sluong[0]));
             }
         });
 
@@ -120,13 +174,12 @@ public class DetailProductActivity extends AppCompatActivity {
         btn_tang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(a[0] > 0){
+                if(sluong[0] > 0){
                     btn_giam.setVisibility(View.VISIBLE);
                 }
-                a[0] += 1;
-                tongSL = tongSL - Integer.parseInt(txt_soluongsp.getText().toString().trim()) + a[0];
-                txt_soluongsp.setText(String.valueOf(a[0]));
-                tongsl.setText(String.valueOf(a[0]));
+                sluong[0] += 1;
+                tongSL = tongSL - Integer.parseInt(txt_soluongsp.getText().toString().trim()) + sluong[0];
+                txt_soluongsp.setText(String.valueOf(sluong[0]));
             }
         });
 
@@ -140,12 +193,37 @@ public class DetailProductActivity extends AppCompatActivity {
             public void onTextChanged(CharSequence cs, int start, int before, int count) {
                 int ab = Integer.parseInt(String.valueOf(cs));
                 if(rb_nho.isChecked())
+                {
                     temp = Integer.parseInt(String.valueOf(s)) * ab;
-                if(rb_vua.isChecked())
+                    if(temp >= 1000000){
+                        temp = temp / 1000000;
+                        tongtien.setText(temp + ".000.000 ");
+                    }else if(temp >= 1000){
+                        temp = temp / 1000;
+                        tongtien.setText(temp + ".000 ");
+                    }
+                }
+
+                if(rb_vua.isChecked()){
                     temp = Integer.parseInt(String.valueOf(m)) * ab;
-                if(rb_lon.isChecked())
+                    if(temp >= 1000000){
+                        temp = temp / 1000000;
+                        tongtien.setText(temp + ".000.000 ");
+                    }else if(temp >= 1000){
+                        temp = temp / 1000;
+                        tongtien.setText(temp + ".000 ");
+                    }
+                }
+                if(rb_lon.isChecked()) {
                     temp = Integer.parseInt(String.valueOf(l)) * ab;
-                tongtien.setText(String.valueOf(temp) + " đ");
+                    if(temp >= 1000000){
+                        temp = temp / 1000000;
+                        tongtien.setText(temp + ".000.000 ");
+                    }else if(temp >= 1000){
+                        temp = temp / 1000;
+                        tongtien.setText(temp + ".000 ");
+                    }
+                }
             }
 
             @Override
@@ -172,8 +250,8 @@ public class DetailProductActivity extends AppCompatActivity {
                         tongtien.getText().toString().trim(),
                         kichthuoc,
                         edt_ghichu.getText().toString().trim(),
-                        gmail);
-                    myData.child("Taikhoan").child(gmail).child("Giohang").child("Cart" + STT).child(cart.getSttgiohang()).setValue(cart);
+                        uid);
+                    myData.child("Giỏ hàng").child(uid).child("Cart" + STT).child(cart.getSttgiohang()).setValue(cart);
                     tongSL += Integer.parseInt(cart.getSoluong());
                     slmon++;
                     Toast.makeText(DetailProductActivity.this, "Thêm sản phẩm vào giỏ hàng thành công !", Toast.LENGTH_SHORT).show();
@@ -189,7 +267,6 @@ public class DetailProductActivity extends AppCompatActivity {
         txt_detailmotasp = (TextView) findViewById(R.id.txt_DetailMotaSP);
         txt_soluongsp = (TextView) findViewById(R.id.txt_Soluong);
         tongtien = (TextView) findViewById(R.id.Tongtien);
-        //tongsl = (TextView) findViewById(R.id.TongSL);
         tensp = (TextView) findViewById(R.id.Tensp);
         btn_tang = (Button) findViewById(R.id.btn_TangSL);
         btn_giam = (Button) findViewById(R.id.btn_GiamSL);

@@ -29,6 +29,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public static FirebaseAuth mAuth;
     public static String gmail = "";
+    public static String uid = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -119,9 +120,9 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+                            FirebaseUser currentUser = mAuth.getCurrentUser();
+                            uid = currentUser.getUid();
                             Toast.makeText(LoginActivity.this, "Đăng nhập thành công!", Toast.LENGTH_LONG).show();
-                            String[] temp = email.split("@");
-                            gmail = temp[0];
                             Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                             startActivity(intent);
                         } else {

@@ -22,6 +22,7 @@ import com.example.coffeebakery.Profile;
 import com.example.coffeebakery.ProfileActivity;
 import com.example.coffeebakery.R;
 import com.example.coffeebakery.Receipt.ReceiptFragment;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 
@@ -31,7 +32,7 @@ public class SettingFragment extends Fragment {
 
     LinearLayout thongtintaikhoan, doimatkhau, sodiachi, thongtinthanhtoan, donhangcuatoi, danhsachyeuthich, vechungtoi, lienhecskh, chinhsachdieukhoan;
     Button dangxuat;
-
+    FirebaseAuth mAuth;
     public SettingFragment() {
         // Required empty public constructor
     }
@@ -85,6 +86,7 @@ public class SettingFragment extends Fragment {
         dangxuat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mAuth = FirebaseAuth.getInstance();
                 AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
                 builder.setMessage("Bạn có chắc là muốn đăng xuất không?");
                 builder.setNeutralButton("Quay lại", new DialogInterface.OnClickListener() {
@@ -96,8 +98,8 @@ public class SettingFragment extends Fragment {
                         .setPositiveButton("Đăng xuất", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                gmail = "";
                                 Toast.makeText(v.getContext(), "Hẹn gặp lại bạn nhé!", Toast.LENGTH_SHORT).show();
+                                mAuth.signOut();
                                 Intent intent = new Intent(view.getContext(), LoginActivity.class);
                                 startActivity(intent);
                                 dialogInterface.cancel();

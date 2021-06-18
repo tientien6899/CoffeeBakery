@@ -24,7 +24,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import static com.example.coffeebakery.DetailProductActivity.STT;
-import static com.example.coffeebakery.LoginActivity.gmail;
+import static com.example.coffeebakery.LoginActivity.uid;
 
 
 public class CartAdapter extends FirebaseRecyclerAdapter<Cart, CartAdapter.Holder> {
@@ -52,10 +52,9 @@ public class CartAdapter extends FirebaseRecyclerAdapter<Cart, CartAdapter.Holde
                     holder.btn_cartgiamsl.setEnabled(true);
                     a--;
                     holder.txt_cartsoluong.setText(a + "");
-                    String tong = (Integer.parseInt(model.getGia()) * a) + " đ";
+                    String tong = (Integer.parseInt(model.getGia()) * a) + "";
                     Cart c = new Cart(model.getSttgiohang(),model.getGiohang(),model.getMa(),model.getTen(),model.getGia(),a+"",model.getHinhanh(), tong,model.getKichthuoc(),model.getGhichu(),model.getNguoidung());
-                    ref.child("Taikhoan").child(gmail).child("Giohang").child("Cart"+STT).child(model.getSttgiohang()).setValue(c);
-
+                    ref.child("Giỏ hàng").child(uid).child("Cart"+STT).child(model.getSttgiohang()).setValue(c);
                 }
             }
         });
@@ -68,9 +67,9 @@ public class CartAdapter extends FirebaseRecyclerAdapter<Cart, CartAdapter.Holde
                     a++;
                     holder.btn_cartgiamsl.setEnabled(true);
                     holder.txt_cartsoluong.setText(a + "");
-                    String tong = (Integer.parseInt(model.getGia()) * a) + " đ";
+                    String tong = (Integer.parseInt(model.getGia()) * a) + "";
                     Cart c = new Cart(model.getSttgiohang(),model.getGiohang(),model.getMa(),model.getTen(),model.getGia(),a+"",model.getHinhanh(), tong,model.getKichthuoc(),model.getGhichu(),model.getNguoidung());
-                    ref.child("Taikhoan").child(gmail).child("Giohang").child("Cart"+STT).child(model.getSttgiohang()).setValue(c);
+                    ref.child("Giỏ hàng").child(uid).child("Cart"+STT).child(model.getSttgiohang()).setValue(c);
                 }
             }
         });
@@ -84,7 +83,7 @@ public class CartAdapter extends FirebaseRecyclerAdapter<Cart, CartAdapter.Holde
                         .setNegativeButton("Đồng ý", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                ref.child("Taikhoan").child(gmail).child("Giohang").child("Cart"+STT).addListenerForSingleValueEvent(new ValueEventListener() {
+                                ref.child("Giỏ hàng").child(uid).child("Cart"+STT).addListenerForSingleValueEvent(new ValueEventListener() {
                                     @Override
                                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                                         for(DataSnapshot data : snapshot.getChildren()){
@@ -92,7 +91,7 @@ public class CartAdapter extends FirebaseRecyclerAdapter<Cart, CartAdapter.Holde
                                             String gh = data.child("giohang").getValue().toString();
                                             if(gh.contains("Cart"+STT)){
                                                 if(sttgh.contains(model.getSttgiohang())){
-                                                    ref.child("Taikhoan").child(gmail).child("Giohang").child("Cart"+STT).child(model.getSttgiohang()).removeValue();
+                                                    ref.child("Giỏ hàng").child(uid).child("Cart"+STT).child(model.getSttgiohang()).removeValue();
                                                     Toast.makeText(v.getContext(), "Xóa thành công!", Toast.LENGTH_SHORT).show();
                                                     dialog.dismiss();
                                                 }

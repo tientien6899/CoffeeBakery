@@ -40,7 +40,14 @@ public class NewProdectAdapter extends RecyclerView.Adapter<NewProdectAdapter.Ho
     public void onBindViewHolder(@NonNull NewProdectAdapter.Holder holder, int position) {
         Product p = (Product) mProduct.get(position);
         holder.newtensp.setText(p.getTensp());
-        holder.newgias.setText(p.getGiaS() + " đ");
+        int temp_gias = Integer.parseInt(p.getGiaS());
+        if(temp_gias >= 1000000){
+            temp_gias = temp_gias / 1000000;
+            holder.newgias.setText(temp_gias + ".000.000 đ");
+        }else if (temp_gias >= 1000){
+            temp_gias = temp_gias / 1000;
+            holder.newgias.setText(temp_gias + ".000 đ");
+        }
         Glide.with(holder.newhinhanh.getContext()).load(p.getLink()).into(holder.newhinhanh);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {

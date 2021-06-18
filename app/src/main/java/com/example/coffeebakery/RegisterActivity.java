@@ -19,8 +19,10 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import static com.example.coffeebakery.LoginActivity.gmail;
+import static com.example.coffeebakery.LoginActivity.uid;
 
 public class RegisterActivity extends AppCompatActivity {
     Button btndangky;
@@ -122,7 +124,6 @@ public class RegisterActivity extends AppCompatActivity {
                 {
                     if (Strpass.equals(Strrepeatpass)) {
                         Dangky(Stremail, Strpass);
-                        gmail = edtusernamedk.getText().toString().trim();
                         Intent intent = new Intent(RegisterActivity.this, ProfileActivity.class);
                         startActivity(intent);
                     } else {
@@ -151,8 +152,6 @@ public class RegisterActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
                     Toast.makeText(RegisterActivity.this, "Đăng ký tài khoản thành công.", Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
-                    startActivity(intent);
                 } else {
                     Toast.makeText(RegisterActivity.this, "Đăng ký tài khoản thất bại.", Toast.LENGTH_LONG).show();
                 }
@@ -166,5 +165,14 @@ public class RegisterActivity extends AppCompatActivity {
         edtpassworddk = findViewById(R.id.edt_passwordDK);
         edtrepeatpass = findViewById(R.id.edt_repeatpass);
         txtdangnhap = findViewById(R.id.txt_Dangnhap);
+    }
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser != null){
+            uid = currentUser.getUid();
+        }
     }
 }

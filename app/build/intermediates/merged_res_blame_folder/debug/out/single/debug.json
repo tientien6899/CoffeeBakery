@@ -1,0 +1,474 @@
+[
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_outline_security_24.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\ic_outline_security_24.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\menu_menu.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\menu\\menu.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_favorite_border_24.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\ic_baseline_favorite_border_24.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_product.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\layout\\fragment_product.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_detail_receipt.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\layout\\activity_detail_receipt.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_teacup.png.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\teacup.png"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_frappe.png.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\frappe.png"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_home.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_van_chuyen.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\layout\\activity_van_chuyen.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_outline_location_on_24.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\ic_outline_location_on_24.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tradaodaxay.png.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\tradaodaxay.png"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_outline_vpn_key_24.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\ic_outline_vpn_key_24.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\layout_custom_item_cart.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\layout\\custom_item_cart.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_giohang.png.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\bg_giohang.png"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_google.png.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\google.png"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_login.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_remove_circle_24.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\ic_baseline_remove_circle_24.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_muffin.png.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\muffin.png"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_product.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\layout\\list_product.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_b.jpg.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\b.jpg"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_edt_trang.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\edt_trang.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_shopping_cart_24.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\ic_baseline_shopping_cart_24.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\layout_custom_item_product.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\layout\\custom_item_product.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_topping.png.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\topping.png"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\font_source_sans_pro.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\font\\source_sans_pro.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_search.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\search.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\font_cairo.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\font\\cairo.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_outline_info_24.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\ic_outline_info_24.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_about_us.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\layout\\activity_about_us.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_coffee.png.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\coffee.png"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button_xoa.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\button_xoa.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_restaurant_24.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\ic_baseline_restaurant_24.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_outline_support_agent_24.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\ic_outline_support_agent_24.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_outline_receipt_24.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\ic_outline_receipt_24.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_developing.png.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\developing.png"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_freezee.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\layout\\activity_freezee.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\layout_custom_detail_receipt.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\layout\\custom_detail_receipt.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_delivery.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\layout\\activity_delivery.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_cart.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\layout\\fragment_cart.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_register.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button_luu.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\button_luu.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button_tienhanhdathang.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\button_tienhanhdathang.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_home_24.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\ic_baseline_home_24.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button_capnhat.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\button_capnhat.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_live_help_24.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\ic_baseline_live_help_24.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_home.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\layout\\activity_home.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_setting.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\layout\\fragment_setting.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_settings_24.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\ic_baseline_settings_24.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\layout_custom_tapchi.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\layout\\custom_tapchi.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_lien_he.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\layout\\activity_lien_he.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_food.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\layout\\activity_food.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_outline_person_outline_24.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\ic_outline_person_outline_24.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_coffee.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\layout\\activity_coffee.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_developing.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\layout\\activity_developing.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\font_roboto.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\font\\roboto.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_topping.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\layout\\activity_topping.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_c.jpg.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\c.jpg"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_phone.png.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\phone.png"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_forgot_password.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\layout\\activity_forgot_password.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\font_telex.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\font\\telex.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_bao_mat.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\layout\\activity_bao_mat.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button_dangxuat.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\button_dangxuat.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_user.png.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\user.png"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button_do.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\button_do.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_doi_mat_khau.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\layout\\activity_doi_mat_khau.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\layout_custom_poster.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\layout\\custom_poster.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_juice.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\layout\\activity_juice.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\layout_custom_item_home.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\layout\\custom_item_home.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_facebook.png.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\facebook.png"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_detail_product.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\layout\\activity_detail_product.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_outline_attach_money_24.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\ic_outline_attach_money_24.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_clear_24.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\ic_baseline_clear_24.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_outline_image_24.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\ic_outline_image_24.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_search_24.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\ic_baseline_search_24.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\layout_custom_new_product.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\layout\\custom_new_product.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button_da.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\button_da.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_outline_keyboard_backspace_24.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\ic_outline_keyboard_backspace_24.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_thanh_toan.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\layout\\activity_thanh_toan.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button_them.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\button_them.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_profile.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\layout\\activity_profile.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\font_bangers.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\font\\bangers.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_hoac.png.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\hoac.png"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_keyboard_arrow_right_24.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\ic_baseline_keyboard_arrow_right_24.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_chung.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\layout\\activity_chung.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_splash.gif.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\splash.gif"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\font_almendra_sc.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\font\\almendra_sc.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_lemonade.png.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\lemonade.png"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_add_circle_24.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\ic_baseline_add_circle_24.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_notifications_24.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\ic_baseline_notifications_24.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_a.jpg.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\a.jpg"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button_xanh.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\button_xanh.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_edt_ghichu.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\edt_ghichu.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logo.png.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\logo.png"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\layout_custom_item_receipt.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\layout\\custom_item_receipt.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_detail_tap_chi.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\layout\\activity_detail_tap_chi.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_exit_to_app_24.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\ic_baseline_exit_to_app_24.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_receipt.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\layout\\fragment_receipt.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_splash.xml.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "E:\\Clone_Update\\CoffeeBakery\\app\\build\\intermediates\\res\\merged\\debug\\drawable_d.jpg.flat",
+        "source": "E:\\Clone_Update\\CoffeeBakery\\app\\src\\main\\res\\drawable\\d.jpg"
+    }
+]
